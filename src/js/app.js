@@ -1,46 +1,49 @@
-
-
 import Api from "./api/Api.js";
 import { Filter } from "./models/Filter.js"
 
 const productsList = await Api.getProduts()
-const filtAll = document.getElementById("all")
-filtAll.addEventListener("click", function(){
 
-    const result = Filter.filterCategory('products', filtAll)
+const filtAll = document.querySelector(".filt__all")
+filtAll.addEventListener("click", () => {
+
+    console.log(productsList)
+
+    //paginaDeProdutos.listarProdutos(productsList)
+})
+
+const filtPan = document.querySelector(".filt__pan")
+filtPan.addEventListener("click", () => {
+
+    const result = Filter.filterCategory(productsList, filtPan)
+    console.log(result)
 
     //paginaDeProdutos.listarProdutos(result)
 })
 
-const filtPan = document.getElementById("pan")
-filtPan.addEventListener("click", function(){
+const filtFruits = document.querySelector(".filt__fruits")
+filtFruits.addEventListener("click", () => {
 
-    const result = Filter.filterCategory('products', filtPan)
-
-    //paginaDeProdutos.listarProdutos(result)
-})
-
-const filtFruits = document.getElementById("fruits")
-filtFruits.addEventListener("click", function(){
-
-    const result = Filter.filterCategory('products', filtFruits)
+    const result = Filter.filterCategory(productsList, filtFruits)
+    console.log(result)
 
     //paginaDeProdutos.listarProdutos(result)
 })
 
-const filtDrinks = document.getElementById("drinks")
-filtDrinks.addEventListener("click", function(){
+const filtDrinks = document.querySelector(".filt__drinks")
+filtDrinks.addEventListener("click", () => {
 
-    const result = Filter.filterCategory('products', filtDrinks)
+    const result = Filter.filterCategory(productsList, filtDrinks)
+    console.log(result)
 
     //paginaDeProdutos.listarProdutos(result)
 })
 
 const searchLabel = document.getElementById("searchLabel")
-searchLabel.addEventListener("keyup", function(){
+searchLabel.addEventListener("keyup", () => {
     
     const value = searchLabel.value
-    const result = Filter.filterSearchLabel('products', value)
+    const result = Filter.filterSearchLabel(productsList, value)
+    console.log(result)
 
     //paginaDeProdutos.listarProdutos(result)
 })
