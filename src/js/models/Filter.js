@@ -13,19 +13,18 @@ export class Filter {
   
     //NOME
     static filterSearchLabel(products, inputValue) {
-        const inputSearch = inputValue
-        console.log(inputSearch)
 
-        // const productsFilt = products.filter((product) => {
-        //   if (
-        //     product.name.includes(inputSearch) ||
-        //     product.section.includes(inputSearch) ||
-        //     product.category.includes(inputSearch)
-        //   ) {
-        //     return true
-        //   }
-        // })
+        const inputSearch = inputValue
+
+        const productsFilt = products.filter((product) => {
+          if (
+            product.nome.includes(inputSearch) ||
+            product.categoria.includes(inputSearch)
+          ) {
+            return true
+          }
+        })
     
-        // return productsFilt
+        return productsFilt
     }
 }
