@@ -6,7 +6,7 @@ export class Filter {
         let category = btn.value
 
         const productsFilt = products.filter(
-            (product) => product.category === category
+            (product) => product.categoria === category
           )
           return productsFilt
     }
