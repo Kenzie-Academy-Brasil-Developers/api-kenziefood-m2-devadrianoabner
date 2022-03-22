@@ -5,14 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenzie Food</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
 </head>
 <body>
 
      <main>
-          <button value="todos" id="all">Todos</button>
-          <button value="panificadora" id="pan">Panificadora</button>
-          <button value="frutas" id="fruits">Frutas</button>
-          <button value="bebidas" id="drinks">Bebidas</button>
+         <div class="btn-filt">
+            <button value="todos" class="btn-filt filt__all">Todos</button>
+            <button value="Panificadora" class="btn-filt filt__pan"><img src="./src/img/pao.jpg" class="btn-img"> Panificadora</button>
+            <button value="Frutas" class="btn-filt filt__fruits"><img src="./src/img/fruta.jpg" class="btn-img"> Frutas</button>
+            <button value="Bebidas" class="btn-filt filt__drinks"><img src="./src/img/bebida.jpg" class="btn-img"> Bebidas</button>
+         </div>
     </main>
     <script type='module' src="./src/js/app.js"></script>
 </body>
