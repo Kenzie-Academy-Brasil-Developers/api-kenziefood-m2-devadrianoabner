@@ -1,47 +1,45 @@
 body{
     background-color: #F8F9FA;
 }
-.content__register--title{
+.content__login--title{
     height: 20px;
     width: 149px;
     margin-top: 15px;
     margin-left: 22px;
-    align-self: start;
     font-family: "Poppins";
     font-size: 25px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
     
-
 }
-.content__register--form{
+.content__login--form{
     position: relative;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #FFFFFF;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 10px 10px 8px 8px;
+    
     top:200px;
-  
 }
 
-.content__register--label{
+.content__login--label{
     margin: 15px 0 5px 22px ;
     width: 310px;
-    align-self: flex-start;
     font-family: "Inter";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0em;
     text-align: left;
+    margin-left: px;
     
 }
-.content__register--input{
+.content__login--input{
 
     height: 52px;
     width: 280px;
@@ -54,7 +52,7 @@ body{
 
 }
 
-.content__register--ButtonCadastro{
+.content__login--ButtonCadastro{
     height: 52px;
     width: 280px;
     left: 580px;
@@ -64,75 +62,55 @@ body{
     background: #FF2253;
     border: 1.5px solid #FF2253;
     color:white;
-}
-.content__register-span{
-    margin-top: 14px;
-}
-
-.content__register-BadRegister{
-    display: flex;
-    position: relative;
-    top: 650px;
-    right: 500px;
+    cursor: pointer;
     
-}
-.msgBadError{
-    margin-top: 15px;
 }
 ::-webkit-input-placeholder{
     padding: 10px;
 }
-@media (min-width: 375px){
 
-    .content__register--input{
-        width: 300px;
-    }
- 
-}
-
-@media (min-width:425px){
-    .content__register--input{
-        width: 390px;
-    }
-    .content__register{
+@media (min-width: 425px){
+    .content__login{
         display: flex;
         justify-content: center;
     }
-    .content__register--title{
+    .content__login--title{
         text-align: center;
         align-self:unset;
     }
   
-    .content__register--label{
+    .content__login--label{
         align-self: unset;
         position: relative;
-        right: 50px ;
+        margin-left: 60px;
     }
-    .content__register--form{
+    .content__login--form{
         width: 750px;
     }
 }
 
 @media (min-width:768px){
-    .content__register{
+    .content__login{
         display: flex;
         justify-content: center;
     }
-    .content__register--title{
+    .content__login--title{
         text-align: center;
         align-self:unset;
     }
-    .content__register--input{
+    .content__login--input{
         width: 390px;
         align-self: unset;
     }
 
-    .content__register--label{
+    .content__login--label{
         align-self: unset;
         position: relative;
         right: 50px ;
     }
-    .content__register--form{
+    .content__login--form{
         width: 750px;
+        height: 600px;
     }
 }
+
