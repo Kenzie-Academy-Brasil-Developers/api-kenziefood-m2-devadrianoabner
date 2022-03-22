@@ -1,5 +1,9 @@
+
+
+import Api from "./api/Api.js";
 import { Filter } from "./pages/Filter.js"
 
+const productsList = await Api.getProduts()
 const filtAll = document.getElementById("all")
 filtAll.addEventListener("click", function(){
 
@@ -40,3 +44,4 @@ searchLabel.addEventListener("keyup", function(){
 
     //paginaDeProdutos.listarProdutos(result)
 })
+
