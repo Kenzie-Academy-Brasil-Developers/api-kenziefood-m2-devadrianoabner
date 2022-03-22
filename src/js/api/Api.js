@@ -3,7 +3,10 @@ import Register from "../controllers/Register.js"
 class Api {
 
     static API_URL = "https://kenzie-food-api.herokuapp.com/"
-
+    static  infoUser = {
+        autenticacao: {},
+        informacoes: {}
+    }
     static async getProduts() {
         const response = await fetch(`${this.API_URL}products`)
         const responseData = response.json()
@@ -28,8 +31,35 @@ class Api {
             default:
                 msgErro.innerText = 'Ops, aconteceu algo de errado, tente novamente.'
         }
-        console.log(responseData)
         const responseData = response.json()
+        return responseData
+    }
+
+    static async login(data) {
+        const msgErro = document.querySelector('.msgBadError')
+        const response = await fetch(`${this.API_URL}auth/login`, {
+            "method": "POST",
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "body": JSON.stringify(data)
+        })
+        const teste = response
+        const responseData =  await response.json()
+        
+        switch (responseData.status) {
+            case 'Error':
+                msgErro.innerText = 'Ops, aconteceu algo de errado, tente novamente.'
+                break;
+                default:
+                    msgErro.innerText = ''
+                    window.location.replace("../../index.html")
+                break
+        }
+        this.infoUser.autenticacao = responseData
+        localStorage.setItem('info',JSON.stringify(Api.infoUser.autenticacao))
+        console.log(this.infoUser)
+        console.log(responseData)
         return responseData
     }
 }

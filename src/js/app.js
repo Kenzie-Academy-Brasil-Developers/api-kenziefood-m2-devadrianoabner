@@ -1,7 +1,7 @@
 
 
 import Api from "./api/Api.js";
-import { Filter } from "./pages/Filter.js"
+import { Filter } from "./models/Filter.js"
 
 const productsList = await Api.getProduts()
 const filtAll = document.getElementById("all")
