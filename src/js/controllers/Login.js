@@ -1,6 +1,5 @@
 import Api from "../api/Api.js"
 
-
 class Login {
 
         static main = document.querySelector('.content__login')
