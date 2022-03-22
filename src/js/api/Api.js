@@ -44,7 +44,6 @@ class Api {
             },
             "body": JSON.stringify(data)
         })
-        const teste = response
         const responseData =  await response.json()
         
         switch (responseData.status) {
@@ -58,8 +57,6 @@ class Api {
         }
         this.infoUser.autenticacao = responseData
         localStorage.setItem('info',JSON.stringify(Api.infoUser.autenticacao))
-        console.log(this.infoUser)
-        console.log(responseData)
         return responseData
     }
 }

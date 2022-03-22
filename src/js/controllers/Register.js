@@ -33,7 +33,6 @@ class Register {
         }
         Api.register(newRegister)
     }
-
 }
 
 export default Register

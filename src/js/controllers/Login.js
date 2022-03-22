@@ -26,7 +26,6 @@ class Login {
                 newLogin[name] = value
             }
         }
-        console.log(newLogin)
         Api.login(newLogin)
     }
     
