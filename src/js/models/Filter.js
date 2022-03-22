@@ -6,7 +6,7 @@ export class Filter {
         let category = btn.value
 
         const productsFilt = products.filter(
-            (product) => product.categoria === category
+            (product) => product.category === category
           )
           return productsFilt
     }
@@ -14,17 +14,18 @@ export class Filter {
     //NOME
     static filterSearchLabel(products, inputValue) {
         const inputSearch = inputValue
+        console.log(inputSearch)
 
-        const productsFilt = products.filter((product) => {
-          if (
-            product.name.includes(inputSearch) ||
-            product.section.includes(inputSearch) ||
-            product.category.includes(inputSearch)
-          ) {
-            return true
-          }
-        })
+        // const productsFilt = products.filter((product) => {
+        //   if (
+        //     product.name.includes(inputSearch) ||
+        //     product.section.includes(inputSearch) ||
+        //     product.category.includes(inputSearch)
+        //   ) {
+        //     return true
+        //   }
+        // })
     
-        return productsFilt
+        // return productsFilt
     }
 }

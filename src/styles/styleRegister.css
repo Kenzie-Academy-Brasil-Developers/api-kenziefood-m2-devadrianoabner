@@ -1,60 +1,12 @@
 body{
     background-color: #F8F9FA;
 }
-.filt__all{
-    height: 48px;
-    width: 88px;
-    left: 117px;
-    top: 116px;
-    border-radius: 32px;
-    padding: 15px, 20px, 15px, 20px;
-    background: #FF2253;
-    border: 1.5px solid #FF2253;
-    color: #F8F9FA;
-}
-.filt__pan{
-    height: 48px;
-width: 170px;
-left: 233px;
-top: 116px;
-border-radius: 32px;
-padding: 15px, 20px, 15px, 20px;
-background: #FFF7F4;
-border: 1.5px solid #FFF7F4
-}
-.filt__fruits{
-    height: 48px;
-width: 170px;
-left: 233px;
-top: 116px;
-border-radius: 32px;
-padding: 15px, 20px, 15px, 20px;
-background: #FFF7F4;
-border: 1.5px solid #FFF7F4
-}
-.filt__drinks{
-    height: 48px;
-width: 170px;
-left: 233px;
-top: 116px;
-border-radius: 32px;
-padding: 15px, 20px, 15px, 20px;
-background: #FFF7F4;
-border: 1.5px solid #FFF7F4
-}
-.btn-img{
-    height: 19px;
-width: 19px;
-left: 20px;
-top: 14.5px;
-border-radius: 0px;
-}
+
 .content__register--title{
     height: 20px;
     width: 149px;
     margin-top: 15px;
     margin-left: 22px;
-    align-self: start;
     font-family: "Poppins";
     font-size: 25px;
     font-style: normal;
@@ -72,7 +24,7 @@ border-radius: 0px;
     justify-content: center;
     align-items: center;
     background: #FFFFFF;
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 10px 10px 8px 8px;
     top:200px;
   
 }
@@ -127,6 +79,7 @@ border-radius: 0px;
 .msgBadError{
     margin-top: 15px;
 }
+
 ::-webkit-input-placeholder{
     padding: 10px;
 }
@@ -135,8 +88,8 @@ border-radius: 0px;
     .content__register--input{
         width: 300px;
     }
- 
-}
+   
+}   
 
 @media (min-width:425px){
     .content__register--input{
@@ -159,6 +112,11 @@ border-radius: 0px;
     .content__register--form{
         width: 750px;
     }
+
+    .content__register--input{
+        width: 390px;
+    }
+   
 }
 
 @media (min-width:768px){
@@ -182,5 +140,8 @@ border-radius: 0px;
     }
     .content__register--form{
         width: 750px;
+        height: 600px;
     }
+   
+
 }

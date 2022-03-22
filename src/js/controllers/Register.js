@@ -15,18 +15,10 @@ class Register {
             <input class="content__register--input"name="password" type="password" placeholder="Senha">
             <button class='content__register--ButtonCadastro'>Cadastrar</button>
             <span class="content__register-span">Já possui Cadastro? Clique em 
-                <a class="content__register-a"href="./src/pages/login.html">mim.</a>
+                <a class="content__register-a"href="./Login.html">mim.</a>
             </span>
             <span class='msgBadError'></span>
         </form>
-        `
-    }
-
-    static createTemplateBadRequest() {
-        this.main.innerHTML += `
-        <div class="content__register-BadRegister">
-            <p>Ops, aconteceu algo de errado. Tente novamente</p>
-        </div>
         `
     }
 
@@ -39,10 +31,8 @@ class Register {
                 newRegister[name] = value
             }
         }
-        console.log(newRegister)
         Api.register(newRegister)
     }
-
 }
 
 export default Register
