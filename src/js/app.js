@@ -38,7 +38,7 @@ filtDrinks.addEventListener("click", () => {
     //paginaDeProdutos.listarProdutos(result)
 })
 
-const searchLabel = document.getElementById("searchLabel")
+const searchLabel = document.querySelector(".input_search")
 searchLabel.addEventListener("keyup", () => {
     
     const value = searchLabel.value
