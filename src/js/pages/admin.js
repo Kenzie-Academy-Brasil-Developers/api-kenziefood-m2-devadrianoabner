@@ -1,6 +1,7 @@
 
 import { Admin } from "../api/Admin.js";
 import { CreateProduct } from "../controllers/createAdminProduct.js";
+import { Delete } from "../controllers/deleteAdminProduct.js";
 import { EditProduct } from "../controllers/EditAdminProduct.js";
 
 
@@ -11,24 +12,57 @@ const teste = document.querySelector('.testeEdit')
 const popUp = document.querySelector('.content__adminForm')
 
 
+const testeDelete = document.querySelector('.testeDelete')
+
+testeDelete.addEventListener('click',(e)=>{
+    CreateProduct.main.innerHTML = ''
+    let id = e.target.id
+    console.log(id)
+    Delete.createTemplate()
+    popUp.classList.remove('remover')
+    const btnYes = document.querySelector('.buttonYes')
+    const btnNo = document.querySelector('.buttonNo')
+    const btnPopUp = document.querySelector('.buttonPopUp')
+
+    btnYes.addEventListener('click',(e)=>{
+        e.preventDefault()
+        Admin.deleteProduct(infoUser,id)
+       
+        popUp.classList.add('remover')
+    })
+    btnNo.addEventListener('click',()=>{
+        popUp.classList.add('remover')
+    })
+     btnPopUp.addEventListener('click', (e) => {
+        e.preventDefault()
+        popUp.classList.add('remover')
+       
+    })
+})
+
+
 teste.addEventListener('click', (e) => {
+    CreateProduct.main.innerHTML = ''
     let id = e.target.id
     EditProduct.createTemplate()
     popUp.classList.remove('remover')
     const addButton = document.querySelector('.content__buttons')
     const form = document.querySelector('.content__admin--form')
     const btnPopUp = document.querySelector('.buttonPopUp')
+    const excluir =  document.querySelector('.buttonEditarExcluir')
 
     btnPopUp.addEventListener('click', (e) => {
         e.preventDefault()
-       
         popUp.classList.add('remover')
-    
-        console.log(id)
+       
     })
-
+    
     addButton.addEventListener('click', (e) => {
         EditProduct.categoria = e.target.value
+    })
+    excluir.addEventListener('click',(e)=>{
+        e.preventDefault()
+        popUp.classList.add('remover')
     })
     form.addEventListener('submit', (e) => {
         e.preventDefault()

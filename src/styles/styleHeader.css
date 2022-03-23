@@ -229,8 +229,6 @@ button:focus{
     line-height: 20px;
     text-align: left;
 
-    
-    
 }
 .content__admin--label{
     margin-top: 15px;
@@ -299,7 +297,7 @@ button:focus{
 .buttonPopUp{
     position: absolute;
     left: 448px;
-    top: 25px;
+    top: 15px;
     border-radius: 5px;
     font-family: Nunito;
     font-size: 14px;
@@ -326,8 +324,6 @@ button:focus{
     border: 1.5px solid #FF2253;
     color:white;
     cursor: pointer;
-
-
 
 }
 .opacity{
@@ -384,6 +380,57 @@ button:focus{
     justify-content: center;
     
     width: 500px;
+}
+
+.content__admin--div{
+    position: relative;
+    top:100px;
+    height: 213px;
+    width: 496px;
+    background: white;
+    border-radius: 8px 8px 8px 8px;
+}
+.content__admin--titleDel{
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 15px;
+    background: #F8F9FA;
+    
+
+}
+.content__buttonsDel{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+.content__admin--p{
+    margin:35px;
+    text-align: center;
+}
+.buttonYes{
+    height: 52px;
+    width: 210px;
+    left: 580px;
+    top: 248px;
+    border-radius: 32px;
+    padding: 15px, 20px, 15px, 20px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    cursor: pointer;
+
+}
+.buttonNo{
+    height: 52px;
+    width: 210px;
+    left: 810px;
+    top: 248px;
+    border-radius: 32px;
+    padding: 15px, 20px, 15px, 20px;
+    background: #F8F9FA;
+    border: 1.5px solid #F8F9FA;
+    cursor: pointer;
+
 }
 @media (min-width: 900px) {
     main {

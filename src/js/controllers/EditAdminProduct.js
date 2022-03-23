@@ -1,14 +1,13 @@
 import { Admin } from "../api/Admin.js"
-
+import {CreateProduct} from "../controllers/createAdminProduct.js"
 class EditProduct {
 
-    static main = document.querySelector('.content__adminForm')
     static categoria = ''
-    static createTemplate(){
-        this.main.innerHTML += `
+    static createTemplate() {
+        CreateProduct.main.innerHTML += `
 
         <div class='opacity'>
-        <form class="content__admin--form" action="">
+        <form class="content__admin--form editProduct" action="">
             <h2 class="content__admin--title">Editar Produto</h2>
             <label class="content__admin--label" for="">Nome do Produto</label>
             <input  class="content__admin--input" name="nome" type="text" placeholder="Digitar o nome"/>
@@ -33,9 +32,9 @@ class EditProduct {
         `
 
     }
-    static productForEdit(data,token,id){
+    static productForEdit(data, token, id) {
         let newProduct = {}
-        
+
         for (let i = 0; i < data.length; i++) {
             const { name, value } = data[i]
             if (name) {
@@ -44,9 +43,9 @@ class EditProduct {
         }
         newProduct.categoria = this.categoria
         console.log(newProduct)
-        Admin.updateProducts(newProduct,token,id)
-     
+        Admin.updateProducts(newProduct, token, id)
+
     }
 }
 
-export {EditProduct} 
+export { EditProduct } 
