@@ -10,6 +10,7 @@ const createProducts = document.querySelector('.createProductAdmin')
 const teste = document.querySelector('.testeEdit')
 const popUp = document.querySelector('.content__adminForm')
 
+
 teste.addEventListener('click', (e) => {
     let id = e.target.id
     EditProduct.createTemplate()
