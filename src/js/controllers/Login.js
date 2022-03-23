@@ -13,7 +13,7 @@ class Login {
        <input class="content__login--input"name="password" type="password" placeholder="Senha">
        <button class='content__login--ButtonCadastro'>Login</button>
        <span class='msgBadError'></span>
-   </form>
+        </form>
        `
     }
 
