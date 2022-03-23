@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-header,
- a {
-     display: flex;
- }
+main{
+    padding: 0 16px;
+}
  
  .container {
      padding: 10px 20px 0 10px;
@@ -104,17 +103,8 @@ header,
     border-radius: 0px;
 }
 
-html{
-    height: 650px;
-    width: 2020px;
-
-}
-body{
-    height:  100%;
-}
-
 .product__Cards{
-    width: 2010px;
+    width: 400px;
     height: 381px;
     display: flex;
     align-items: center;
@@ -122,6 +112,7 @@ body{
     flex-wrap: nowrap;
     flex-direction: row;
     margin-left: 18px;
+    overflow-x:scroll;
 }
 
 .card__Product{
