@@ -87,7 +87,7 @@ header,
     border: 1.5px solid #FFF7F4
 }
 .filt__drinks{
-        height: 48px;
+    height: 48px;
     width: 170px;
     left: 233px;
     top: 116px;
@@ -118,7 +118,7 @@ body{
     height: 381px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     flex-direction: row;
     margin-left: 18px;
@@ -197,6 +197,7 @@ body{
     max-height: 38px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -215,6 +216,7 @@ body{
     max-height: 38px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .product__Button--resize{
@@ -223,6 +225,27 @@ body{
     max-width: 38px;
     max-height: 38px;
     align-items: center;   
+}
+
+.cart{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    max-width: 374px;
+}
+
+.cart__button{
+    width: 100%;
+    max-width: 374px;
+    height: 60px;
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+    background: #FF2253;
+
+}
+
+.cart__button--format{
+
 }
 
 @media (min-width: 425px) {
@@ -303,6 +326,14 @@ body{
         height: 36px;
         width: 36px;
     }
+    .product__Cards{
+        width: 1005px;
+        height: 965px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
 }
 
 @media (min-width: 1440px){
@@ -313,7 +344,7 @@ body{
         width:100%;
     }
     .product__Cards{
-        width: 1005px;
+        width: 965px;
         height: 965px;
         display: flex;
         align-items: center;
