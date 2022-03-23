@@ -2,9 +2,12 @@ class Admin {
 
     static URL_API = "https://kenzie-food-api.herokuapp.com/"
 
+
+
     static async getProducts(token) {
         const response = await fetch(`${this.URL_API}my/products`, { headers: { Authorization: `Bearer ${token}` } })
         const dataResponse = await response.json()
+ 
         console.log(dataResponse)
     }
     static async createProducts(data,token) {
