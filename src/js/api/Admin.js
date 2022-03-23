@@ -34,7 +34,7 @@ class Admin {
             "body": JSON.stringify(data)
         })
 
-        const responseData = response.json()
+        const responseData = await response.json()
         console.log(responseData)
         return responseData
     }
