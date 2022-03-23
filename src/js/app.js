@@ -70,8 +70,30 @@ searchLabel.addEventListener("keyup", () => {
     //paginaDeProdutos.listarProdutos(result)
 })
 
-sectionOfProducts.addEventListener("click", (event) =>{
-    
-   let productId = event.target.id 
-   
+
+//ativando botão do carrinho versão mobile
+const cart = document.querySelector(".main__cart")
+const cartButton = document.querySelector(".cart__button")
+const closeCart = document.querySelector(".cart__header__button")
+const cartBoddy = document.querySelector(".cart__body")
+const cartCard = document.querySelector(".cart_cardBody")
+
+cartButton.addEventListener("click", () =>{
+
+    cart.style = "display:block;"
+
+})
+
+closeCart.addEventListener("click", () =>{
+
+    cart.style = "display:none;"
+
+})
+// fazer addEventListener no body do cart
+cartBoddy.addEventListener("click", (event) =>{
+
+    if(event.target.id === "remove"){
+        // fazer um splice 
+        // cartCard.splice()
+    }
 })
