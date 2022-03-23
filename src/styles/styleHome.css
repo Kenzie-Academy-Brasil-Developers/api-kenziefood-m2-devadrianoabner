@@ -228,10 +228,8 @@ body{
 }
 
 .cart{
-    position: fixed;
-    bottom: 0px;
+    position:absolute;
     width: 100%;
-    max-width: 374px;
 }
 
 .cart__button{
