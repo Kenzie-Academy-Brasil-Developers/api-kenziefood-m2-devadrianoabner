@@ -1,191 +1,211 @@
-        
-        header,
-        a {
-            display: flex;
-        }
-        
-        .container {
-            padding: 10px 20px 0 10px;
-        }
-        
-        .img_logo {
-            margin-bottom: 20px;
-        }
-        
-        .header_search {
-            display: flex;
-            align-items: center;
-        }
-        
-        .search {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-        
-        .img_search {
-            position: absolute;
-            left: 6px;
-            height: 16px;
-        }
-        
-        .input_search {
-            padding: 4px 4px 4px 30px;
-            border-radius: 12px;
-            border: none;
-            box-sizing: border-box;
-            background-color: #E9ECEF;
-            width: 312px;
-            height: 40px;
-        }
-        
-        .img_search {
-            height: 16px;
-        }
-        
-        .user {
-            position: relative;
-            bottom: 55px;
-            left: 5px;
-        }
-        
-        .container_login {
-            position: relative;
-            bottom: 68px;
-            left: 246px;
-        }
-       .filt__all{
-           height: 48px;
-           width: 88px;
-           left: 117px;
-           top: 116px;
-           border-radius: 32px;
-           padding: 15px, 20px, 15px, 20px;
-           background: #FF2253;
-           border: 1.5px solid #FF2253;
-           color: #F8F9FA;
-       }
-       .filt__pan{
-           height: 48px;
-           width: 170px;
-           left: 233px;
-           top: 116px;
-           border-radius: 32px;
-           padding: 15px, 20px, 15px, 20px;
-           background: #FFF7F4;
-           border: 1.5px solid #FFF7F4
-       }
-       .filt__fruits{
-           height: 48px;
-           width: 170px;
-           left: 233px;
-           top: 116px;
-           border-radius: 32px;
-           padding: 15px, 20px, 15px, 20px;
-           background: #FFF7F4;
-           border: 1.5px solid #FFF7F4
-       }
-       .filt__drinks{
-               height: 48px;
-           width: 170px;
-           left: 233px;
-           top: 116px;
-           border-radius: 32px;
-           padding: 15px, 20px, 15px, 20px;
-           background: #FFF7F4;
-           border: 1.5px solid #FFF7F4
-       }
-       .btn-img{
-           height: 19px;
-           width: 19px;
-           left: 20px;
-           top: 14.5px;
-           border-radius: 0px;
-       }
-        @media (min-width: 425px) {
-            header,
-            a {
-                display: flex;
-                padding: 12px;
-            }
-            .user {
-                position: relative;
-                bottom: 60px;
-                left: 40px;
-            }
-            .container_login {
-                position: relative;
-                bottom: 80px;
-                left: 376px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            header,
-            a {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 12px;
-            }
-            .container {
-                display: flex;
-                align-items: center;
-                justify-content: stretch;
-                width: 1024px;
-            }
-            .container_admin {
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                width: 90%;
-            }
-            .img_logo {
-                width: 122px;
-                height: 33px;
-            }
-            .header_search {
-                display: flex;
-            }
-            .search {
-                position: relative;
-                display: flex;
-                align-items: center;
-            }
-            .img_search {
-                position: relative;
-                left: 230px;
-                height: 16px;
-                z-index: 2;
-            }
-            .input_search {
-         
-                padding: 4px 4px 4px 30px;
-                border-radius: 12px;
-                border: none;
-                box-sizing: border-box;
-                background-color: #E9ECEF;
-                width: 312px;
-                height: 40px;
-            }
-            .container_login {
-                position: relative;
-                right: 50px;
-                bottom: 0px;
-                /* left: 20px; */
-            }
-            .user {
-                position: relative;
-                left: 70px;
-                bottom: 3px;
-                height: 36px;
-                width: 36px;
-            }
-        }
-        @media (min-width:1024px){
-            .container_admin{
-                width:94%;
-            }
-        }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+:root {
+    --color-primary: #FF2253;
+    --color-primary-50: #FFE9EE;
+    --color-secondary: #0CA678;
+    --color-secondary-50: #E4F7EF;
+    --grey-4: #212529;
+    --grey-3: #868E96;
+    --grey-2: #E9ECEF;
+    --grey-1: #F8F9FA;
+    --product-1: #EEF6FF;
+    --product-2: #FFF7F4;
+    --product-3: #FFF1F4;
+    --product-4: #F3EEF5;
+}
 
-        
+html,
+input,
+button {
+    font-family: 'Poppins';
+}
+
+.title1 {
+    color: #000000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.title2 {
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.title3 {
+    color: #000000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 13px;
+}
+
+.body {
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.caption {
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.detail {
+    color: #000000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.container {
+    max-width: 1685px;
+    width: 100%;
+}
+
+main {
+    padding: 0 16px;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 16px 16px 0;
+}
+
+.container_admin {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_admin>* {
+    margin-bottom: 32px;
+}
+
+.header_search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header_search>*:not(:first-child) {
+    margin-left: 16px;
+}
+
+.search {
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.search img:first-child {
+    height: 20px;
+    left: 16px;
+    position: absolute;
+}
+
+.search input {
+    background: var(--grey-2);
+    border: 1px solid var(--grey-2);
+    border-radius: 12px;
+    box-sizing: border-box;
+    height: 49px;
+    padding: 15px 18px 15px 48px;
+    width: 100%;
+}
+
+.search input,
+.search input::placeholder {
+    color: var(--grey-3);
+    font-size: 16px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.btn-container::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-container>*:not(:first-child) {
+    margin-left: 16px;
+}
+
+.btn-filt {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    border-radius: 50px;
+    border: none;
+}
+
+.btn-filt:hover {
+    background: var(--color-primary);
+    color: var(--color-primary-50);
+}
+
+.btn-filt>*:not(:first-child) {
+    margin-left: 16px;
+}
+
+.filt__all {
+    background: var(--product-1);
+}
+
+.filt__pan {
+    background: var(--product-2);
+}
+
+.filt__fruits {
+    background: var(--product-3);
+}
+
+.filt__drinks {
+    background: var(--product-4);
+}
+
+@media (min-width: 900px) {
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 16px;
+    }
+    header {
+        box-shadow: 0 0 40px -20px rgba(0, 0, 0, .25);
+        height: 72px;
+        padding: 0 16px;
+    }
+    .container_admin {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .container_admin>* {
+        margin-bottom: 0;
+    }
+    .header_search,
+    .search {
+        width: auto;
+    }
+    .search input {
+        width: 312px;
+    }
+}

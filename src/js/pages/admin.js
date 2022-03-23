@@ -1,5 +1,5 @@
-import Admin from "../api/Admin.js";
+import { Admin } from './../api/Admin.js'
 
-console.log('tesre')
+console.log('teste')
 const UserToken = localStorage.getItem('info')
 console.log(UserToken)
