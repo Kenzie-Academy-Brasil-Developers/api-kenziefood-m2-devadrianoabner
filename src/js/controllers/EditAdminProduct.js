@@ -1,14 +1,15 @@
-import Api from "../api/Api.js"
 import { Admin } from "../api/Admin.js"
-class CreateProduct {
+
+class EditProduct {
 
     static main = document.querySelector('.content__adminForm')
     static categoria = ''
     static createTemplate(){
         this.main.innerHTML += `
+
         <div class='opacity'>
         <form class="content__admin--form" action="">
-            <h2 class="content__admin--title">Cadastrar Produto</h2>
+            <h2 class="content__admin--title">Editar Produto</h2>
             <label class="content__admin--label" for="">Nome do Produto</label>
             <input  class="content__admin--input" name="nome" type="text" placeholder="Digitar o nome"/>
             <textarea class="content__admin--texterea" name="descricao" placeholder="Digitar a descrição"></textarea> 
@@ -23,13 +24,16 @@ class CreateProduct {
             <input  class="content__admin--input" name='preco' type="number" placeholder="Digitar o valor aqui">
             <label class="content__admin--label" for="">Link da imagem</label>
             <input class="content__admin--input"type="text" name='imagem' placeholder="Inserir link"/>
-            <button id='submit'class='buttonCadastrar' >Cadastrar Produto</button>
+            <div class='content_div'>
+            <button id='submit'class='buttonEditarExcluir'>Excluir</button>
+            <button id='submit'class='buttonEditar'>Salvar alterações</button>
+            </div>
         </form>
         </div>
         `
 
     }
-    static createNewProduct(data,token){
+    static productForEdit(data,token,id){
         let newProduct = {}
         
         for (let i = 0; i < data.length; i++) {
@@ -40,9 +44,9 @@ class CreateProduct {
         }
         newProduct.categoria = this.categoria
         console.log(newProduct)
-        Admin.createProducts(newProduct,token)
-
+        Admin.updateProducts(newProduct,token,id)
+     
     }
 }
 
-export {CreateProduct}
+export {EditProduct} 
