@@ -5,6 +5,7 @@ class CreateProduct {
     static main = document.querySelector('.content__adminForm')
     static categoria = ''
     static createTemplate(){
+        this.main.innerHTML = ''
         this.main.innerHTML += `
         <div class='opacity'>
         <form class="content__admin--form" action="">
