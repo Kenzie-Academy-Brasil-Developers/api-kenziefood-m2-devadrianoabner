@@ -12,7 +12,7 @@ class Delete {
             <p class='content__admin--p'>Tem certeza que deja excluir o produto ?</p>
             <div class='content__buttonsDel'>
             <button class='buttonYes'>Sim</button>
-            <button class='buttonNo'>No</button>
+            <button class='buttonNo'>Não</button>
             </div>
             <button class='buttonPopUp' type=button>X</button>
         </div>

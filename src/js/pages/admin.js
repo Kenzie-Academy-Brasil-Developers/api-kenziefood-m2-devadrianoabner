@@ -10,7 +10,6 @@ const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
 const createProducts = document.querySelector('.createProductAdmin')
 const teste = document.querySelector('.testeEdit')
 const popUp = document.querySelector('.content__adminForm')
-const popUpEdit = document.querySelector('.content__adminFormEdit')
 
 const testeDelete = document.querySelector('.testeDelete')
 
