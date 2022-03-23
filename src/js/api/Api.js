@@ -56,7 +56,7 @@ class Api {
                 break
         }
         this.infoUser.autenticacao = responseData
-        localStorage.setItem('@kenzie__food:Token',JSON.stringify(Api.infoUser.autenticacao))
+        localStorage.setItem('@kenzie_food:token',JSON.stringify(Api.infoUser.autenticacao))
         return responseData
     }
 }

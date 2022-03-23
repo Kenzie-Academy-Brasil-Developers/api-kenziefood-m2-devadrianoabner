@@ -1,15 +1,19 @@
 import Api from "./api/Api.js";
+import { Controller } from "./controllers/Controller.js";
 import { Filter } from "./models/Filter.js"
 
 const productsList = await Api.getProduts()
+Controller.sendProductsCards(productsList)
+
+
+
 
 // const filtAll = document.querySelector(".filt__all")
 // filtAll.addEventListener("click", () => {
 
-//     console.log(productsList)
-
-//     //paginaDeProdutos.listarProdutos(productsList)
-// })
+    console.log(productsList)
+    //paginaDeProdutos.listarProdutos(productsList)
+})
 
 // const filtPan = document.querySelector(".filt__pan")
 // filtPan.addEventListener("click", () => {
@@ -38,6 +42,10 @@ const productsList = await Api.getProduts()
 //     //paginaDeProdutos.listarProdutos(result)
 // })
 
+
+const searchLabel = document.querySelector(".input_search")
+searchLabel.addEventListener("keyup", () => {
+  
 // const searchLabel = document.getElementById("searchLabel")
 // searchLabel.addEventListener("keyup", () => {
     
@@ -48,3 +56,4 @@ const productsList = await Api.getProduts()
 //     //paginaDeProdutos.listarProdutos(result)
 // })
 
+export {productsList}
