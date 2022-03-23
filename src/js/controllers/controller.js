@@ -1,4 +1,4 @@
-import {Models} from "./../Models/models.js"
+import {Models} from "../models/models.js"
 
 class Controller {
     static sendProductsCards(produtos){
