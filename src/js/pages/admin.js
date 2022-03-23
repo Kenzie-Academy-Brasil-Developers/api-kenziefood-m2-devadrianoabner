@@ -1,5 +1,5 @@
-import Admin from "../api/Admin.js";
+import {Admin} from "../api/Admin.js";
 
-console.log('tesre')
-const UserToken = localStorage.getItem('info')
-console.log(UserToken)
+const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
+
+
