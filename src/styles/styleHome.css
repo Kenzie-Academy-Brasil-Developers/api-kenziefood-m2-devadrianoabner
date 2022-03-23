@@ -220,6 +220,7 @@ main{
 
 .localCommerce{
     position:absolute;
+    bottom: 0px;
     width: 100%;
 }
 
@@ -323,6 +324,12 @@ main{
         align-items: center;
         justify-content: flex-start;
         flex-wrap: wrap;
+    }
+    .localCommerce{
+        display: none;
+        position:absolute;
+        bottom: 0px;
+        width: 100%;
     }
 }
 
@@ -447,5 +454,11 @@ main{
         max-width: 38px;
         max-height: 38px;
         align-items: center;   
+    }
+    .localCommerce{
+        display: none;
+        position:absolute;
+        bottom: 0px;
+        width: 100%;
     }
 }
