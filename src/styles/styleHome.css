@@ -227,14 +227,17 @@ body{
     align-items: center;   
 }
 
-.cart{
+.localCommerce{
     position:absolute;
+    width: 100%;
+}
+
+.cart{
     width: 100%;
 }
 
 .cart__button{
     width: 100%;
-    max-width: 374px;
     height: 60px;
     border: none;
     border-radius: 0px 0px 8px 8px;
@@ -242,9 +245,7 @@ body{
 
 }
 
-.cart__button--format{
 
-}
 
 @media (min-width: 425px) {
     header,
