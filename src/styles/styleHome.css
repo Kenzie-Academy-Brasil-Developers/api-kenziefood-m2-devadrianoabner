@@ -2,6 +2,7 @@
 
 main{
     padding: 0 16px;
+
 }
  
  .container {
@@ -15,6 +16,7 @@ main{
  .header_search {
      display: flex;
      align-items: center;
+     width: 400px;
  }
  
  .search {
@@ -236,6 +238,18 @@ main{
     background: #FF2253;
 
 }
+
+ .product__Cards{
+
+ }
+
+ .main__cart{
+
+ }
+
+ .cart__headerInfo{
+     
+ }
 
 
 
