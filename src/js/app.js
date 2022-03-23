@@ -1,13 +1,15 @@
 import Api from "./api/Api.js";
+import { Controller } from "./controllers/controller.js";
 import { Filter } from "./models/Filter.js"
 
 const productsList = await Api.getProduts()
+Controller.sendProductsCards(productsList)
+
 
 const filtAll = document.querySelector(".filt__all")
 filtAll.addEventListener("click", () => {
 
     console.log(productsList)
-
     //paginaDeProdutos.listarProdutos(productsList)
 })
 

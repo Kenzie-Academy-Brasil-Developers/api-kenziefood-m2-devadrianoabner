@@ -10,22 +10,39 @@
     <title>Admin</title>
 </head>
 
-<header>
-    <div class="container_admin">
-        <img class="img_logo" src="../img/logo.png" />
-        
-        <div class="header_search">
-            <div class="search">
-                <img class="img_search" src="../img/search.svg" />
-                <input class="input_search" type="text" placeholder="Pesquisar por produto">
-            </div>
-            <img class="user" src="../img/User.png" />
-        </div>
-    </div>
-</header>
+
 
 <body>
+    <header>
+        <div class="container_admin container">
+            <img class="img_logo" src="../img/logo.png" />
 
+            <div class="header_search">
+                <div class="search">
+                    <img class="img_search" src="../img/search.svg" />
+                    <input class="input_search" type="text" placeholder="Pesquisar por produto">
+                </div>
+                <img class="user" src="../img/User.png" />
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="btn-container container">
+            <button value="todos" class="btn-filt filt__all">Todos</button>
+            <button value="Panificadora" class="btn-filt filt__pan">
+                <img src="../img/Icon_bread.svg" alt="Imagem de um pão">
+                <p class="title2">Panificadora</p>
+            </button>
+            <button value="Frutas" class="btn-filt filt__fruits">
+                <img src="../img/Icon_fruits.svg" alt="Imagem de uma fruta">
+                <p class="title2">Frutas</p>
+            </button>
+            <button value="Bebidas" class="btn-filt filt__drinks">
+                <img src="../img/Icon_glass of wine.svg" alt="Imagem de um copo com vinho">
+                <p class="title2">Bebidas</p>
+            </button>
+        </div>
+    </main>
     <script type="module" src="../js/pages/admin.js"></script>
 </body>
 
