@@ -1,5 +1,5 @@
 import Api from "./api/Api.js";
-import { Controller } from "./Controller/controller.js";
+import { Controller } from "./controllers/controller.js";
 import { Filter } from "./models/Filter.js"
 
 const productsList = await Api.getProduts()
