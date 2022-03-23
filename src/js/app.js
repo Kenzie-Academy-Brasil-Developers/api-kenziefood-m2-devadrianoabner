@@ -48,3 +48,4 @@ searchLabel.addEventListener("keyup", () => {
     //paginaDeProdutos.listarProdutos(result)
 })
 
+console.log(Api.infoUser)
