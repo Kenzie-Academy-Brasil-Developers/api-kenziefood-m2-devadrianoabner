@@ -6,7 +6,7 @@ export class Filter {
         let category = btn.value
 
         const productsFilt = products.filter(
-            (product) => product.categoria === category
+            (product) => product.categoria.toLowerCase() === category.toLowerCase()
           )
           return productsFilt
     }
@@ -14,12 +14,12 @@ export class Filter {
     //NOME
     static filterSearchLabel(products, inputValue) {
 
-        const inputSearch = inputValue
+        const inputSearch = inputValue.toLowerCase()
 
         const productsFilt = products.filter((product) => {
           if (
-            product.nome.includes(inputSearch) ||
-            product.categoria.includes(inputSearch)
+            product.nome.toLowerCase().includes(inputSearch) ||
+            product.categoria.toLowerCase().includes(inputSearch)
           ) {
             return true
           }

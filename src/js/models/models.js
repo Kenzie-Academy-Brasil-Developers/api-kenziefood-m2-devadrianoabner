@@ -10,6 +10,7 @@ class Models {
         let productSection = document.querySelector(".product__Cards")
         let card = document.createElement("div")
         card.classList.add("card__Product")
+
         card.innerHTML = 
             `
             <figure class="card__Product--format">
