@@ -1,61 +1,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html,
+input,
+button {
+    font-family: 'Poppins';
+}
 
-header,
- a {
-     display: flex;
- }
- 
- .container {
-     padding: 10px 20px 0 10px;
- }
- 
- .img_logo {
-     margin-bottom: 20px;
- }
- 
- .header_search {
-     display: flex;
-     align-items: center;
- }
- 
- .search {
-     position: relative;
-     display: flex;
-     align-items: center;
- }
- 
- .img_search {
-     position: absolute;
-     left: 6px;
-     height: 16px;
- }
- 
- .input_search {
-     padding: 4px 4px 4px 30px;
-     border-radius: 12px;
-     border: none;
-     box-sizing: border-box;
-     background-color: #E9ECEF;
-     width: 312px;
-     height: 40px;
- }
- 
- .img_search {
-     height: 16px;
- }
- 
- .user {
-     position: relative;
-     bottom: 55px;
-     left: 5px;
- }
- 
- .container_login {
-     position: relative;
-     bottom: 68px;
-     left: 246px;
- }
-.filt__all{
+.title1 {
+    color: #000000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+}
+
+.title2 {
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.title3 {
+    color: #000000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 13px;
+}
+
+.body {
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.caption {
+    color: #000000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.detail {
+    color: #000000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.container {
+    max-width: 1685px;
+    width: 100%;
+}
+
+main {
+    padding: 0 16px;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    padding: 16px 16px 0;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: scroll;
+}
+
+.btn-container::-webkit-scrollbar {
+    display: none;
+}
+
+.filter_container>*:not(:first-child) {
+    margin-left: 16px;
+}
+
+.filter_container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-filt {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    border-radius: 50px;
+    border: none;
+}
+
+.btn-filt:hover {
+    background: var(--color-primary);
+    color: var(--color-primary-50);
+}
+
+.btn-filt>*:not(:first-child) {
+    margin-left: 16px;
+}
+
+.filt__all {
+    background: var(--product-1);
+}
+
+.filt__pan {
+    background: var(--product-2);
+}
+
+.filt__fruits {
+    background: var(--product-3);
+}
+
+.filt__drinks {
+    background: var(--product-4);
+}
+
+.container {
+    padding: 10px 20px 0 10px;
+}
+
+.img_logo {
+    margin-bottom: 20px;
+}
+
+.header_search {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.img_search {
+    position: absolute;
+    left: 6px;
+    height: 16px;
+}
+
+.input_search {
+    padding: 4px 4px 4px 30px;
+    border-radius: 12px;
+    border: none;
+    box-sizing: border-box;
+    background-color: #E9ECEF;
+    width: 312px;
+    height: 40px;
+}
+
+.img_search {
+    height: 16px;
+}
+
+.user {
+    position: relative;
+    bottom: 55px;
+    left: 5px;
+}
+
+.container_login {
+    position: relative;
+    bottom: 68px;
+    left: 246px;
+}
+
+.filt__all {
     height: 48px;
     width: 88px;
     left: 117px;
@@ -66,7 +186,8 @@ header,
     border: 1.5px solid #FF2253;
     color: #F8F9FA;
 }
-.filt__pan{
+
+.filt__pan {
     height: 48px;
     width: 170px;
     left: 233px;
@@ -76,7 +197,8 @@ header,
     background: #FFF7F4;
     border: 1.5px solid #FFF7F4
 }
-.filt__fruits{
+
+.filt__fruits {
     height: 48px;
     width: 170px;
     left: 233px;
@@ -86,8 +208,9 @@ header,
     background: #FFF7F4;
     border: 1.5px solid #FFF7F4
 }
-.filt__drinks{
-        height: 48px;
+
+.filt__drinks {
+    height: 48px;
     width: 170px;
     left: 233px;
     top: 116px;
@@ -96,7 +219,8 @@ header,
     background: #FFF7F4;
     border: 1.5px solid #FFF7F4
 }
-.btn-img{
+
+.btn-img {
     height: 19px;
     width: 19px;
     left: 20px;
@@ -104,16 +228,16 @@ header,
     border-radius: 0px;
 }
 
-html{
+html {
     height: 650px;
     width: 2020px;
-
-}
-body{
-    height:  100%;
 }
 
-.product__Cards{
+body {
+    height: 100%;
+}
+
+.product__Cards {
     width: 2010px;
     height: 381px;
     display: flex;
@@ -124,46 +248,41 @@ body{
     margin-left: 18px;
 }
 
-.card__Product{
-
+.card__Product {
     width: 303px;
     height: 381px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-  
 }
 
-.card__Product--format{
+.card__Product--format {
     width: 303px;
     height: 381px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-.card__Product--format{
+.card__Product--format {
     width: 294px;
     height: 194px;
     background-color: #FFF1F4;
     border-radius: 5px;
     display: flex;
     justify-content: center;
-
 }
 
-.card__Product--resize{
+.card__Product--resize {
     width: 98%;
     height: 98%;
     max-width: 294px;
     max-height: 194px;
     border-radius: 5px;
-
 }
 
-.Title--format{
+.Title--format {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -172,7 +291,7 @@ body{
     color: #000000;
 }
 
-.Paragraph--format{
+.Paragraph--format {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -181,26 +300,24 @@ body{
     color: #868E96;
 }
 
-.category--format{
+.category--format {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-
 }
 
-.product__Price{
+.product__Price {
     width: 100%;
     height: 100%;
     max-width: 294px;
     max-height: 38px;
     display: flex;
     justify-content: space-between;
-    
 }
 
-.product__Price--format{
+.product__Price--format {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -208,7 +325,7 @@ body{
     line-height: 20px;
 }
 
-.product__Button{
+.product__Button {
     width: 100%;
     height: 100%;
     max-width: 50px;
@@ -217,12 +334,12 @@ body{
     border: none;
 }
 
-.product__Button--resize{
+.product__Button--resize {
     width: 100%;
     height: 100%;
     max-width: 38px;
     max-height: 38px;
-    align-items: center;   
+    align-items: center;
 }
 
 @media (min-width: 425px) {
@@ -246,13 +363,12 @@ body{
 @media (min-width: 768px) {
     header,
     a {
-
         padding: 12px;
     }
     .container {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: flex-start;
         width: 85%;
     }
     .container_admin {
@@ -271,17 +387,18 @@ body{
     .search {
         position: relative;
         display: flex;
+        width: 330px;
         align-items: center;
     }
     .img_search {
         position: relative;
-        left: 230px;
+        left: 382px;
         height: 16px;
         z-index: 2;
     }
     .input_search {
         position: relative;
-        left: 205px;
+        left: 360px;
         padding: 4px 4px 4px 30px;
         border-radius: 12px;
         border: none;
@@ -294,7 +411,6 @@ body{
         position: relative;
         right: 50px;
         bottom: 0px;
-     
     }
     .user {
         position: relative;
@@ -305,23 +421,26 @@ body{
     }
 }
 
-@media (min-width: 1440px){
-    .container_admin{
+@media (min-width: 1024px) {
+    .container_admin {
         justify-content: space-between;
     }
-    .container{
-        width:100%;
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
     }
-    .product__Cards{
-        width: 1005px;
+    .product__Cards {
+        width: 965px;
         height: 965px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 18px;
     }
-    
-    .card__Product{
+    .card__Product {
         width: 100%;
         height: 100%;
         max-width: 303px;
@@ -330,10 +449,8 @@ body{
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-      
     }
-    
-    .card__Product--format{
+    .card__Product--format {
         width: 100%;
         height: 100%;
         max-width: 303px;
@@ -341,10 +458,8 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-    
     }
-    
-    .card__Product--format{
+    .card__Product--format {
         width: 100%;
         height: 100%;
         max-width: 294px;
@@ -353,19 +468,15 @@ body{
         border-radius: 5px;
         display: flex;
         justify-content: center;
-    
     }
-    
-    .card__Product--resize{
+    .card__Product--resize {
         width: 98%;
         height: 98%;
         max-width: 294px;
         max-height: 194px;
         border-radius: 5px;
-    
     }
-    
-    .Title--format{
+    .Title--format {
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
@@ -373,8 +484,7 @@ body{
         line-height: 27px;
         color: #000000;
     }
-    
-    .Paragraph--format{
+    .Paragraph--format {
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
@@ -382,36 +492,30 @@ body{
         line-height: 24px;
         color: #868E96;
     }
-    
-    .category--format{
+    .category--format {
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
         color: #868E96;
-    
     }
-    
-    .product__Price{
+    .product__Price {
         width: 100%;
         height: 100%;
         max-width: 294px;
         max-height: 38px;
         display: flex;
         justify-content: space-between;
-        
     }
-    
-    .product__Price--format{
+    .product__Price--format {
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
     }
-    
-    .product__Button{
+    .product__Button {
         width: 100%;
         height: 100%;
         max-width: 50px;
@@ -419,12 +523,11 @@ body{
         background-color: transparent;
         border: none;
     }
-    
-    .product__Button--resize{
+    .product__Button--resize {
         width: 100%;
         height: 100%;
         max-width: 38px;
         max-height: 38px;
-        align-items: center;   
+        align-items: center;
     }
 }
