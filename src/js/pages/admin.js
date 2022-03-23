@@ -11,6 +11,7 @@ const createProducts = document.querySelector('.createProductAdmin')
 const teste = document.querySelector('.testeEdit')
 const popUp = document.querySelector('.content__adminForm')
 
+
 const testeDelete = document.querySelector('.testeDelete')
 
 testeDelete.addEventListener('click',(e)=>{
@@ -38,6 +39,7 @@ testeDelete.addEventListener('click',(e)=>{
        
     })
 })
+
 
 teste.addEventListener('click', (e) => {
     CreateProduct.main.innerHTML = ''
