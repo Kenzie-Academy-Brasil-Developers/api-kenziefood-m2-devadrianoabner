@@ -65,6 +65,7 @@ header,
     background: #FF2253;
     border: 1.5px solid #FF2253;
     color: #F8F9FA;
+    cursor: pointer;
 }
 .filt__pan{
     height: 48px;
@@ -74,7 +75,8 @@ header,
     border-radius: 32px;
     padding: 15px, 20px, 15px, 20px;
     background: #FFF7F4;
-    border: 1.5px solid #FFF7F4
+    border: 1.5px solid #FFF7F4;
+    cursor: pointer;
 }
 .filt__fruits{
     height: 48px;
@@ -94,7 +96,8 @@ header,
     border-radius: 32px;
     padding: 15px, 20px, 15px, 20px;
     background: #FFF7F4;
-    border: 1.5px solid #FFF7F4
+    border: 1.5px solid #FFF7F4;
+    cursor: pointer;
 }
 .btn-img{
     height: 19px;
