@@ -1,10 +1,11 @@
 
+
 import { Admin } from "../api/Admin.js";
 import { CreateProduct } from "../controllers/CreateAdminProduct.js";
 
-
+const userToken = JSON.parse(localStorage('@kenzie__food:Token'))
+console.log(userToken)
 const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
-
 
 const createProducts = document.querySelector('.createProductAdmin')
 const popUp = document.querySelector('.content__adminForm')
@@ -29,3 +30,4 @@ createProducts.addEventListener('click', () => {
         CreateProduct.createNewProduct(e.target)
     })
 })
+
