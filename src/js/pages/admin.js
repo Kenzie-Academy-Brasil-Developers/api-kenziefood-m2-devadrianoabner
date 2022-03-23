@@ -10,24 +10,24 @@ const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
 const createProducts = document.querySelector('.createProductAdmin')
 const teste = document.querySelector('.testeEdit')
 const popUp = document.querySelector('.content__adminForm')
-
+const buttonExit = document.querySelector('.buttonExit')
 
 const testeDelete = document.querySelector('.testeDelete')
 
 testeDelete.addEventListener('click',(e)=>{
     CreateProduct.main.innerHTML = ''
     let id = e.target.id
-    console.log(id)
     Delete.createTemplate()
+    
     popUp.classList.remove('remover')
     const btnYes = document.querySelector('.buttonYes')
     const btnNo = document.querySelector('.buttonNo')
     const btnPopUp = document.querySelector('.buttonPopUp')
-
+    buttonSair.classList.remove('remover')
     btnYes.addEventListener('click',(e)=>{
         e.preventDefault()
         Admin.deleteProduct(infoUser,id)
-       
+        
         popUp.classList.add('remover')
     })
     btnNo.addEventListener('click',()=>{
@@ -91,5 +91,4 @@ createProducts.addEventListener('click', () => {
         CreateProduct.createNewProduct(e.target,infoUser)
     })
 })
-
 

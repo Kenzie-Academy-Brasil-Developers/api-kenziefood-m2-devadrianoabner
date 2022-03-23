@@ -15,6 +15,7 @@ class Api {
 
     static async register(data) {
         const msgErro = document.querySelector('.msgBadError')
+        
         const response = await fetch(`${this.API_URL}auth/register`, {
             "method": "POST",
             "headers": {
@@ -37,6 +38,7 @@ class Api {
 
     static async login(data) {
         const msgErro = document.querySelector('.msgBadError')
+        const adminHome = document.querySelector('.linkAdmin')
         const response = await fetch(`${this.API_URL}auth/login`, {
             "method": "POST",
             "headers": {
@@ -53,6 +55,7 @@ class Api {
                 default:
                     msgErro.innerText = ''
                     window.location.replace("../../index.html")
+                    adminHome.classList.remove('remover')
                 break
         }
         this.infoUser.autenticacao = responseData
