@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/styleHeader.css">
+    <title>Admin</title>
 </head>
+
+
+
 <body>
-    
-    <script type="module" src="../js/pages/admin.js" ></script>
+    <header>
+        <div class="container_admin container">
+            <img class="img_logo" src="../img/logo.png" />
+            <div class="header_search">
+                <div class="search">
+                    <img class="img_search" src="../img/search.svg" />
+                    <input class="input_search" type="text" placeholder="Pesquisar por produto">
+                </div>
+                <img class="user" src="../img/User.png" />
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="btn-container">
+                <div class="filter_container">
+                    <button value="todos" class="btn-filt filt__all">Todos</button>
+                    <button value="Panificadora" class="btn-filt filt__pan">
+                        <img src="../img/Icon_bread.svg" alt="Imagem de um pão">
+                        <p class="title2">Panificadora</p>
+                    </button>
+                    <button value="Frutas" class="btn-filt filt__fruits">
+                        <img src="../img/Icon_fruits.svg" alt="Imagem de uma fruta">
+                        <p class="title2">Frutas</p>
+                    </button>
+                    <button value="Bebidas" class="btn-filt filt__drinks">
+                        <img src="../img/Icon_glass of wine.svg" alt="Imagem de um copo com vinho">
+                        <p class="title2">Bebidas</p>
+                    </button>
+                </div>
+                <div class="filter_container">
+                    <button class="btn-filt createProductAdmin">Adicionar novo Produto</button>
+
+                    <!-- <button class="createProductAdmin">Adicionar novo Produto</button> -->
+                    <!-- <button id='462' class="testeEdit">Teste</button>
+                    <button id='376' class="testeDelete">TesteDelete</button> -->
+
+                </div>
+            </div>
+            <section>
+                <div class="product-header">
+                    <p>Produto</p>
+                    <p>Categorias</p>
+                    <p>Descrição</p>
+                    <p>Ações</p>
+                </div>
+                <div id="list" class="product-list"></div>
+            </section>
+
+        </div>
+    </main>
+    <section class="content__productsAdmin"></section>
+    <section class="content__adminForm "></section>
+    <section class="content__status"></section>
+    <div class="msgBadError"></div>
+    <script type="module" src="../js/pages/admin.js"></script>
 </body>
+
 </html>
