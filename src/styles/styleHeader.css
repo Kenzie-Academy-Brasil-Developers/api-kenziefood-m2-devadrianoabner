@@ -127,6 +127,7 @@ header {
     width: 100%;
 }
 
+
 .search input,
 .search input::placeholder {
     color: var(--grey-3);
