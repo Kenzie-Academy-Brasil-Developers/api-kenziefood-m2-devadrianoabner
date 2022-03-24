@@ -7,10 +7,11 @@ class Admin {
     static async getProducts(token) {
         const response = await fetch(`${this.URL_API}my/products`, { headers: { Authorization: `Bearer ${token}` } })
         const dataResponse = await response.json()
+
         return dataResponse
-        
+
     }
-    static async createProducts(data,token) {
+    static async createProducts(data, token) {
         const response = await fetch(`${this.URL_API}my/products`, {
             "method": "POST",
             "headers": {
@@ -31,7 +32,7 @@ class Admin {
         return responseData
     }
 
-    static async updateProducts(data,token, id) {
+    static async updateProducts(data, token, id) {
         const response = await fetch(`${this.URL_API}my/products/${id}`, {
             "method": "PATCH",
             "headers": {
@@ -52,7 +53,7 @@ class Admin {
         return responseData
     }
 
-    static async deleteProduct(token,id){
+    static async deleteProduct(token, id) {
         const response = await fetch(`${this.URL_API}my/products/${id}`, {
             "method": "DELETE",
             "headers": {
