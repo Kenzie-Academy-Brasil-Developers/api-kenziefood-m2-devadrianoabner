@@ -13,9 +13,8 @@ const admin = document.querySelector('.linkAdmin')
 const logOut = document.querySelector('.buttonLogOut')
 const mainSection = document.querySelector('.product__Cards')
 const productsPrivade = await Admin.getProducts(infoUser)
-console.log(productsPrivade)
+
 if (infoUser != null && infoUser.error == undefined) {
-    console.log('oi')
     Controller.sendProductsCards(productsPrivade)
     filters(productsPrivade)
     admin.classList.remove('remover')
