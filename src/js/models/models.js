@@ -1,3 +1,4 @@
+import { Carrinho } from "./Carrinho.js"
 
 
 
@@ -21,7 +22,7 @@ class Models {
             <h3 class="category--format">${product.categoria}</h3>
             <div class="product__Price">
                 <p class="product__Price--format" >R$ ${product.preco}</p>
-                <button class="product__Button" valeu="${product.id}">
+                <button class="product__Button" id="btnToCart${product.id}">
                     <img class="product__Button--resize" src="./src/img/imagem_carrinho_figma.png" alt="carrinho">
                 </button>
             </div>
