@@ -616,6 +616,7 @@ header {
         justify-content: space-evenly;
         padding-left: 40px;
         padding-top: 40px;
+        
 
     }
     .localCommerce{
@@ -637,9 +638,7 @@ header {
     }
 
 
-                                /* CARRINHO */
-
-                              
+/* //////////////////////////////////////CARRINHO///////////////////////////////////////////////////// */
 .comercial{
     display: flex;
 }
@@ -857,9 +856,8 @@ header {
         display: none;
     }
 
-                                /* CARRINHO */
 
-                              
+/* //////////////////////////////////////CARRINHO///////////////////////////////////////////////////// */
 .comercial{
     display: flex;
 }
@@ -1058,4 +1056,6 @@ header {
     line-height: 14px;
     color: #000000;
 }
+
+
 }
