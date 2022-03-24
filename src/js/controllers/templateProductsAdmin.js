@@ -2,7 +2,7 @@ import { Admin } from "../api/Admin.js";
 import { CreateProduct } from "./createAdminProduct.js";
 import { Delete } from "./deleteAdminProduct.js";
 import { EditProduct } from "./EditAdminProduct.js";
-
+const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
 class productsAdmin {
 
 
@@ -81,10 +81,11 @@ class productsAdmin {
                 e.preventDefault()
                 popUp.classList.add('remover')
             })
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', async(e) => {
                 e.preventDefault()
                 popUp.classList.add('remover')
                 EditProduct.productForEdit(e.target, infoUser, id)
+                await Admin.getProducts(infoUser)
             })
         }
 
@@ -98,10 +99,10 @@ class productsAdmin {
             const btnNo = document.querySelector('.buttonNo')
             const btnPopUp = document.querySelector('.buttonPopUp')
 
-            btnYes.addEventListener('click', (e) => {
+            btnYes.addEventListener('click', async(e) => {
                 e.preventDefault()
                 Admin.deleteProduct(infoUser, id)
-
+                 await Admin.getProducts(infoUser)
                 popUp.classList.add('remover')
             })
             btnNo.addEventListener('click', () => {
