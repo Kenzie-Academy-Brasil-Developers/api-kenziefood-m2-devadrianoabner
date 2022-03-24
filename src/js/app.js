@@ -12,28 +12,14 @@ const productsList = await Api.getProduts()
 const admin = document.querySelector('.linkAdmin')
 const logOut = document.querySelector('.buttonLogOut')
 const mainSection = document.querySelector('.product__Cards')
-
+const productsPrivade = await Admin.getProducts(infoUser)
+console.log(productsPrivade)
 if (infoUser != null && infoUser.error == undefined) {
-
-    const productsPrivade = await Admin.getProducts(infoUser)
+    console.log('oi')
     Controller.sendProductsCards(productsPrivade)
     filters(productsPrivade)
     admin.classList.remove('remover')
     logOut.classList.remove('remover')
-    mainSection.addEventListener("click", (event) => {
-     
-        const btnBuy  = event.target
-        
-        if(btnBuy.tagName == "IMG"){
-    
-            const idProduct  = btnBuy.id
-    
-            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduct)
-            Carrinho.postProduct(productsPrivade[indexProd])
-            Carrinho.sendProductsCards()
-        }
-    
-    })
     
 } else {
     Controller.sendProductsCards(productsList)
@@ -51,6 +37,20 @@ const cart = document.querySelector(".main__cart")
 const cartButton = document.querySelector(".cart__button")
 const closeCart = document.querySelector(".cart__header__button")
 const cartBoddy = document.querySelector('.cart__body')
+mainSection.addEventListener("click", (event) => {
+ 
+    const btnBuy  = event.target
+    
+    if(btnBuy.tagName == "IMG"){
+
+        const idProduct  = btnBuy.id
+
+        let indexProd = productsPrivade.findIndex(produ => produ.id == idProduct)
+        Carrinho.postProduct(productsPrivade[indexProd])
+        Carrinho.sendProductsCards()
+    }
+
+})
 cartButton.addEventListener("click", () => {
     cart.style = "display:block;"
 
