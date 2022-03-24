@@ -53,7 +53,6 @@ class ProductsAdmin {
             let div3 = document.createElement('div');
             div2.appendChild(div3);
 
-
             let button1 = document.createElement('button');
             button1.className = 'button1';
             button1.id = product.id
@@ -61,6 +60,7 @@ class ProductsAdmin {
             div3.appendChild(button1);
 
             let img1 = document.createElement('img');
+            img1.classList.add('imgButton')
             img1.src = "../img/edit.svg";
             button1.appendChild(img1);
 
@@ -71,13 +71,16 @@ class ProductsAdmin {
             div3.appendChild(button2);
 
             let img2 = document.createElement('img');
+            img2.classList.add('imgButton')
             img2.src = "../img/trash.svg";
             button2.appendChild(img2);
         });
+
         function editItem(e) {
+
             CreateProduct.main.innerHTML = ''
             let id = e.target.id
-            console.log(id)
+         
             EditProduct.createTemplate()
             popUp.classList.remove('remover')
             const addButton = document.querySelector('.content__buttons')
@@ -102,8 +105,8 @@ class ProductsAdmin {
                 e.preventDefault()
                 popUp.classList.add('remover')
                 ProductsAdmin.main.innerHTML = ''
-                await EditProduct.productForEdit(e.target, infoUser, id)
-                updateProducts()
+                 await EditProduct.productForEdit(e.target, infoUser, id)
+                 await updateProducts()
             })
         }
 
@@ -120,7 +123,7 @@ class ProductsAdmin {
                 e.preventDefault()
                 ProductsAdmin.main.innerHTML = ''
                await Admin.deleteProduct(infoUser, id)
-                updateProducts()
+                await updateProducts()
                 popUp.classList.add('remover')
             })
             btnNo.addEventListener('click', () => {
@@ -134,6 +137,7 @@ class ProductsAdmin {
         }
 
         createProducts.addEventListener('click', () => {
+
             CreateProduct.createTemplate()
             popUp.classList.remove('remover')
             const addButton = document.querySelector('.content__buttons')
@@ -152,9 +156,8 @@ class ProductsAdmin {
                 popUp.classList.add('remover')
                 ProductsAdmin.main.innerHTML = ''
                 await CreateProduct.createNewProduct(e.target, infoUser)
-                updateProducts()
+                await updateProducts()
                
-              
             })
         })
     }

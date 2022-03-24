@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
     --color-primary: #FF2253;
     --color-primary-50: #FFE9EE;
@@ -163,6 +165,7 @@ header {
     padding: 12px 16px;
     border-radius: 50px;
     border: none;
+    cursor: pointer;
 }
 
 .btn-filt:hover {
@@ -176,18 +179,22 @@ header {
 
 .filt__all {
     background: var(--product-1);
+    cursor: pointer;
 }
 
 .filt__pan {
     background: var(--product-2);
+    cursor: pointer;
 }
 
 .filt__fruits {
     background: var(--product-3);
+    cursor: pointer;
 }
 
 .filt__drinks {
     background: var(--product-4);
+    cursor: pointer;
 }
 
 .add_product {
@@ -198,7 +205,22 @@ header {
 .add_product p {
     color: var(--color-primary-50);
 }
-
+.itemDrop{
+    position: relative;
+    top:10px;
+    left: 16px;
+    width: 65px;
+    height: 30px;
+    text-decoration: none;
+    color:#000000;
+    padding: 0;
+    font-size: 15px;
+  
+   
+}
+.itemDrop:hover{
+  transform: scale(1.2);
+}
 .product__Cards{
     width: 400px;
     height: 381px;
@@ -539,17 +561,18 @@ header {
     color: #000000;
 }
 .buttonLogOut{
-    height: 48px;
-    width: 117px;
-    left: 1268px;
-    top: 116px;
+    height: 21px;
+    width: 60px;
     border-radius: 32px;
     padding: 15px, 20px, 15px, 20px;
     background: #FF2253;
     border: 1.5px solid #FF2253;
     color:white;
     cursor: pointer;
+    margin-left: 18px;
+    margin-top: 30px;
 }
+
 /* //////////////////////////////////////MODAL CRIAR CONTA/////////////////////////////////////// */
 
 .login__modal{
@@ -652,10 +675,28 @@ header {
         position: relative;
         bottom: 60px;
         left: 40px;
+
+
+.menuDrop{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top:15px;
+    cursor: pointer;
+    border-radius: 50%;
+
     }
-    .container_login {
-        position: relative;
+    
+.menuDropItens{
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    background-color: #E9ECEF;
+    border-radius: 10px;
+    top: 40px;
+    right: 0;
     }
+      
     /* //////////////////////////////////////MODAL CRIAR CONTA/////////////////////////////////////// */
 
 .login__modal{
@@ -748,6 +789,16 @@ header {
     color: #F8F9FA;
 
 }
+      
+a{
+    text-decoration: none;
+    color:#868E96;
+    padding: 5px;
+    margin-bottom: 4px;
+}
+    
+@media (min-width: 425px) {
+
 }
 
 @media (min-width: 900px) {
@@ -803,19 +854,7 @@ header {
         position:fixed;
         width: 100%;
     }
-    .buttonLogOut{
-        height: 48px;
-        width: 117px;
-        left: 1268px;
-        top: 116px;
-        border-radius: 32px;
-        padding: 15px, 20px, 15px, 20px;
-        background: #FF2253;
-        border: 1.5px solid #FF2253;
-        color:white;
-        cursor: pointer;
-    }
-
+ 
 
 /* //////////////////////////////////////CARRINHO///////////////////////////////////////////////////// */
 .comercial{
@@ -1004,11 +1043,10 @@ header {
     color: #F8F9FA;
 
 }
-
-    
+ 
 }
 
-@media (min-width: 1440px){
+/* @media (min-width: 1440px){
     .container_admin{
         justify-content: space-between;
         width: 925px;
@@ -1026,58 +1064,8 @@ header {
         padding-top: 40px;
         align-content: space-around;
     }
-    .card__Product {
-        width: 100%;
-        height: 100%;
-        max-width: 303px;
-        max-height: 397px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    .card__Product--format {
-        width: 100%;
-        height: 100%;
-        max-width: 303px;
-        max-height: 397px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .card__Product--format {
-        width: 100%;
-        height: 100%;
-        max-width: 294px;
-        max-height: 194px;
-        background-color: #FFF1F4;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-    }
-    .card__Product--resize {
-        width: 98%;
-        height: 98%;
-        max-width: 294px;
-        max-height: 194px;
-        border-radius: 5px;
-    }
-    .Title--format {
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 27px;
-        color: #000000;
-    }
-    .Paragraph--format {
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-        color: #868E96;
-    }
+  
+   
     .category--format {
         font-family: 'Poppins';
         font-style: normal;
@@ -1195,6 +1183,7 @@ header {
     background-image: url(./../img/carrinho_vazio.png);
 }
 
+
 .cart_cardBody{
     position: relative;
     width: 100%;
@@ -1241,6 +1230,7 @@ header {
     font-size: 12px;
     line-height: 16px;
     color: #868E96;
+    text-overflow: ellipsis;
 }
 
 .productCart__price--format{

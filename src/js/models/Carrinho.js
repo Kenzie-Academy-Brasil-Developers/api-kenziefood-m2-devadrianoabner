@@ -14,7 +14,7 @@ export class Carrinho{
     static products = []
     
     static interfaceCarrinho(product){
-
+      
       let cardCart = document.createElement("div")
         cardCart.classList.add("cardCart__Product")
 
@@ -29,7 +29,7 @@ export class Carrinho{
                     <h3 class="productCart__price--format">${product.preco}</h3>
                 </div>
                 <button class="buttonProduct__remove">
-                <img src="./src/img/trash.png" class="imgTrash__cart--resize">
+                <img src="./src/img/trash.png" class="imgTrash__cart--resize" id="${product.id}">
                 </button>
           </div>`
       
@@ -44,11 +44,13 @@ export class Carrinho{
 
       this.getLocalStorage().forEach(product =>{
           this.interfaceCarrinho(product)
+          console.log(product)
       })
   }
 
     static totalValue() {
 
+    
         const total = this.products.reduce((total, product) => {
           const productPrice = product.preco;
           return total + Number(productPrice);
@@ -61,9 +63,9 @@ export class Carrinho{
       return this.products
     }
 
-    static postProduct(produt){
+    static postProduct(product){
       
-        this.products.push(produt)
+        this.products.push(product)
         this.setLocalStorage()
         divQuantity.style = "display: flex;"
         divTotalPrice.style = "display: flex;"
@@ -85,7 +87,7 @@ export class Carrinho{
       
       if(typeof productsJson === "string"){
           
-          const productsCart   =  JSON.parse(productsJson)
+          const productsCart  =  JSON.parse(productsJson)
 
           this.products = productsCart 
 
@@ -98,6 +100,18 @@ export class Carrinho{
       }
      
   }
+
+  static removeProduct(id){
+    
+    let indexProduct = Carrinho.products.findIndex(item => item.id == Number(id))
+    Carrinho.products.splice(indexProduct, 1)
+    
+    quantityNum.innerText = Carrinho.products.length
+    Carrinho.totalValue()
+
+    localStorage.setItem('produtos', JSON.stringify(Carrinho.products))
+    Carrinho.sendProductsCards()
+    }
   
     static initDataBase(){
     this.getLocalStorage()

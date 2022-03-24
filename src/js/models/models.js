@@ -21,7 +21,7 @@ class Models {
             <p class="Paragraph--format" >${product.descricao}</p>
             <h3 class="category--format">${product.categoria}</h3>
             <div class="product__Price">
-                <p class="product__Price--format" >R$ ${product.preco}</p>
+                <p class="product__Price--format" >R$ ${Number(product.preco).toFixed(2)}</p>
                 <button class="product__Button" id="btnToCart${product.id}">
                     <img class="product__Button--resize" src="./src/img/imagem_carrinho_figma.png" alt="carrinho" id="${product.id}">
                 </button>

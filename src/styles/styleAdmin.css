@@ -70,7 +70,8 @@ button {
 
 .container {
     max-width: 965px;
-    width: 100%;
+    width: 190%;
+   
 }
 
 main {
@@ -138,7 +139,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow-x: scroll;
+    
 }
 
 .btn-container::-webkit-scrollbar {
@@ -206,9 +207,10 @@ header {
     cursor: pointer;
 }
 
-section>* {
+section>*{
     margin-top: 60px;
     margin-bottom: 32px;
+    
 }
 
 .product-header {
@@ -235,10 +237,11 @@ section>* {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 100px;
     align-items: center;
+   
 }
 
 .product-detail>* {
-    margin-left: 24px;
+    margin-left: 22px;
 }
 
 .product-category {
@@ -336,9 +339,10 @@ button:focus {
 }
 
 .buttonCadastrar {
-    height: 52px;
+    height: 22px;
     align-self: center;
     width: 440px;
+    height: 50px;
     left: 580px;
     top: 719px;
     margin-top: 25px;
@@ -368,25 +372,31 @@ button:focus {
     cursor: pointer;
 }
 
-.createProductAdmin {
-
-    background: #FF2253;
-    border: 1.5px solid #FF2253;
-    color: white;
-    cursor: pointer;
-}
-
 .opacity {
     display: flex;
     justify-content: center;
-    position: relative;
+    position: absolute;
     background: #00000080;
-    bottom: 759px;
+    bottom: 959px;
     opacity: 1.5;
     width: 100%;
     height: 130vh;
 }
-
+.buttonLogOut{
+    margin-left: 16px;
+    margin-top: 60px;
+    background-color: white;
+    border: 1px black;
+    color:black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.buttonLogOut:hover{
+    
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    color: white;
+}
 .remover {
     display: none;
 }
@@ -582,7 +592,76 @@ button:focus {
         background: red;
         border-radius: 0px 0px 8px 8px;
     }
-@media (min-width: 900px) {
+    .createProductAdmin {
+
+        height: 48px;
+        width: 67px;
+        left: 1268px;
+        top: 116px;
+        border-radius: 32px;
+        padding: 15px, 20px, 15px, 20px;
+        background: #FF2253; 
+        border: 1.5px solid #FF2253;
+        color: #F5F5F5;  
+        cursor: pointer;
+        transform: scale(1)     
+    }
+    .createProductAdmin:hover{
+        transform: scale(1.2);
+    }
+    .menuDrop{
+        position: relative;
+        cursor: pointer;
+        transform: scale(1.1);
+        z-index: 3;
+    }
+    .menuDrop:hover{
+        transform: scale(1.3);
+    }
+    .menuDropItens{
+        position: absolute;
+        height: 150px;
+        width: 100px;
+        background-color: #DEE2E6;
+        border-radius: 10px;
+        top: 50px;
+        
+        right: 0;
+    }
+
+    .imgButton{
+        pointer-events: none;
+    }
+    .button1{
+        cursor:pointer
+    }
+    .button1:hover{
+        background: red;
+        color:white;
+    }
+    .product__Button{
+        transform: scale(1);
+    }
+    .product__Button:hover{
+      transform: scale(1.3);
+    }
+    .itemDrop{
+        position: relative;
+        top:10px;
+        left: 16px;
+        width: 65px;
+        height: 30px;
+        text-decoration: none;
+        color:#000000;
+        padding: 0;
+        font-size: 15px;
+      
+       
+    }
+    .itemDrop:hover{
+      transform: scale(1.2);
+    }
+    @media (min-width: 900px) {
     main {
         display: flex;
         flex-direction: column;
@@ -613,16 +692,16 @@ button:focus {
     }
     .createProductAdmin {
         left: 70%;
+        width: 217px;
     }
     
     .opacity {
-    display: flex;
-    justify-content: center;
+
     position: relative;
     background: #00000080;
-    bottom: 1040px;
+    bottom: 60vw;
     opacity: 1.5;
     width: 100%;
-    height: 130vh;
+    height: 830vh;
 }
 }
