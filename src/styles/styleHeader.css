@@ -361,12 +361,7 @@ button:focus {
 }
 
 .createProductAdmin {
-    /* position: absolute; */
-    /* height: 48px; */
-    /* width: 217px; */
-    /* left: 100%; */
-    /* border-radius: 32px; */
-    /* padding: 15px, 20px, 15px, 20px; */
+
     background: #FF2253;
     border: 1.5px solid #FF2253;
     color: white;
@@ -378,7 +373,7 @@ button:focus {
     justify-content: center;
     position: relative;
     background: #00000080;
-    bottom: 200px;
+    bottom: 969px;
     opacity: 1.5;
     width: 100%;
     height: 130vh;
@@ -481,6 +476,13 @@ button:focus {
     cursor: pointer;
 }
 
+.imgProduct{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    
+}
 @media (min-width: 900px) {
     main {
         display: flex;

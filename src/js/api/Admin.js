@@ -60,11 +60,11 @@ class Admin {
         })
         switch (response.status) {
             case 204:
-                Status.templateYes('Produto adicionado com sucesso')
+                Status.templateYes('Produto deletado com sucesso')
 
                 break;
             default:
-                Status.templateNo('Ocorreu algum erro, o produto não foi adicionado')
+                Status.templateNo('Ocorreu algum erro, o produto não foi deletado')
         }
         const responseData = await response.json()
 
