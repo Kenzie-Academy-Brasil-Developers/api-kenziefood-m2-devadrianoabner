@@ -3,7 +3,7 @@ import Register from "../controllers/Register.js"
 class Api {
 
     static API_URL = "https://kenzie-food-api.herokuapp.com/"
-    static  infoUser = {
+    static infoUser = {
         autenticacao: {},
         informacoes: {}
     }
@@ -15,6 +15,7 @@ class Api {
 
     static async register(data) {
         const msgErro = document.querySelector('.msgBadError')
+        
         const response = await fetch(`${this.API_URL}auth/register`, {
             "method": "POST",
             "headers": {
@@ -24,7 +25,7 @@ class Api {
         })
 
         switch (response.status) {
-            case 200:
+            case 201:
                 msgErro.innerText = ''
                 window.location.replace("./Login.html")
                 break;
@@ -37,6 +38,7 @@ class Api {
 
     static async login(data) {
         const msgErro = document.querySelector('.msgBadError')
+        const adminHome = document.querySelector('.linkAdmin')
         const response = await fetch(`${this.API_URL}auth/login`, {
             "method": "POST",
             "headers": {
@@ -44,19 +46,20 @@ class Api {
             },
             "body": JSON.stringify(data)
         })
-        const responseData =  await response.json()
-        
-        switch (responseData.status) {
-            case 'Error':
-                msgErro.innerText = 'Ops, aconteceu algo de errado, tente novamente.'
+
+        switch (response.status) {
+            case 200:
+                msgErro.innerText = ''
+                window.location.replace("../../index.html")
                 break;
                 default:
-                    msgErro.innerText = ''
-                    window.location.replace("../../index.html")
-                break
+                    msgErro.innerText = 'Ops, aconteceu algo de errado, tente novamente.'
+                break;
         }
+        const responseData =  await response.json()
+        console.log(responseData)
         this.infoUser.autenticacao = responseData
-        localStorage.setItem('@kenzie_food:token',JSON.stringify(Api.infoUser.autenticacao))
+        localStorage.setItem('@kenzie_food:token', JSON.stringify(Api.infoUser.autenticacao))
         return responseData
     }
 }

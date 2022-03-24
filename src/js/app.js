@@ -1,54 +1,55 @@
+import { Admin } from "./api/Admin.js";
 import Api from "./api/Api.js";
 import { Controller } from "./controllers/controller.js";
 import { Carrinho } from "./models/Carrinho.js";
 import { Filter } from "./models/Filter.js"
+import { filters } from "./controllers/Filters.js";
 
+const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
 const productsList = await Api.getProduts()
-Controller.sendProductsCards(productsList)
+const productsPrivade = await Admin.getProducts(infoUser)
+const admin = document.querySelector('.linkAdmin')
+const logOut = document.querySelector('.buttonLogOut')
 
-
-const filtAll = document.querySelector(".filt__all")
-filtAll.addEventListener("click", () => {
-
+if(infoUser != null){
+    Controller.sendProductsCards(productsPrivade)
+    filters(productsPrivade)
+    admin.classList.remove('remover')
+    logOut.classList.remove('remover')
+}else{
     Controller.sendProductsCards(productsList)
+    filters(productsList)
+    admin.classList.add('remover')
+    logOut.classList.add('remover')
+}
+
+logOut.addEventListener('click',()=>{
+    window.location.replace("./src/pages/Login.html")
+    localStorage.clear('@kenzie_food:token')
+})
+//ativando botão do carrinho versão mobile
+const cart = document.querySelector(".main__cart")
+const cartButton = document.querySelector(".cart__button")
+const closeCart = document.querySelector(".cart__header__button")
+const cartBoddy = document.querySelector(".cart__body")
+const cartCard = document.querySelector(".cart_cardBody")
+
+cartButton.addEventListener("click", () =>{
+
+    cart.style = "display:block;"
+
 })
 
-const filtPan = document.querySelector(".filt__pan")
-filtPan.addEventListener("click", () => {
-
-    const result = Filter.filterCategory(productsList, filtPan)
-    console.log(result)
-
-    Controller.sendProductsCards(result)
-})
-
-const filtFruits = document.querySelector(".filt__fruits")
-filtFruits.addEventListener("click", () => {
-
-    const result = Filter.filterCategory(productsList, filtFruits)
-    console.log(result)
-
-    Controller.sendProductsCards(result)
-})
-
-const filtDrinks = document.querySelector(".filt__drinks")
-filtDrinks.addEventListener("click", () => {
-
-    const result = Filter.filterCategory(productsList, filtDrinks)
-    console.log(result)
-
-    Controller.sendProductsCards(result)
-})
-
-const searchLabel = document.querySelector(".input_search")
-searchLabel.addEventListener("keyup", () => {
+closeCart.addEventListener("click", () =>{
     
-    const value = searchLabel.value
-    const result = Filter.filterSearchLabel(productsList, value)
-    console.log(result)
+    
+    cart.style = "display:none;"
+                
 
-    Controller.sendProductsCards(result)
 })
+// fazer addEventListener no body do cart
+cartBoddy.addEventListener("click", (event) =>{
+
 
 Carrinho.sendProductsCards()
 
@@ -60,3 +61,9 @@ for(let i = 0; i < productsList.length; i++){
 
     })
 }
+    if(event.target.id === "remove"){
+        // fazer um splice 
+        // cartCard.splice()
+    }
+})
+export {productsList,productsPrivade}
