@@ -1,6 +1,8 @@
 import { Admin } from "./api/Admin.js";
 import Api from "./api/Api.js";
 import { Controller } from "./controllers/controller.js";
+import { Carrinho } from "./models/Carrinho.js";
+import { Filter } from "./models/Filter.js"
 import { filters } from "./controllers/Filters.js";
 
 const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
@@ -48,6 +50,17 @@ closeCart.addEventListener("click", () =>{
 // fazer addEventListener no body do cart
 cartBoddy.addEventListener("click", (event) =>{
 
+
+Carrinho.sendProductsCards()
+
+for(let i = 0; i < productsList.length; i++){
+    const addCartBtn = document.getElementById("btnToCart"+(i+1))
+    addCartBtn.addEventListener('click', () => {
+        Carrinho.postProduct(productsList[i])
+        Carrinho.sendProductsCards()
+
+    })
+}
     if(event.target.id === "remove"){
         // fazer um splice 
         // cartCard.splice()
