@@ -21,14 +21,20 @@ if (infoUser != null && infoUser.error == undefined) {
     admin.classList.remove('remover')
     logOut.classList.remove('remover')
     mainSection.addEventListener("click", (event) => {
-        const btnBuy = event.target
-        if (btnBuy.tagName == "IMG") {
-            const idProduto = btnBuy.id
-            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduto)
+     
+        const btnBuy  = event.target
+        
+        if(btnBuy.tagName == "IMG"){
+    
+            const idProduct  = btnBuy.id
+    
+            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduct)
             Carrinho.postProduct(productsPrivade[indexProd])
             Carrinho.sendProductsCards()
         }
+    
     })
+    
 } else {
     Controller.sendProductsCards(productsList)
     filters(productsList)
@@ -54,21 +60,6 @@ closeCart.addEventListener("click", () => {
     cart.style = "display:none;"
 })
 
-// fazer addEventListener no body do cart
-mainSection.addEventListener("click", (event) => {
-     
-    const btnBuy  = event.target
-    
-    if(btnBuy.tagName == "IMG"){
-
-        const idProduct  = btnBuy.id
-
-        let indexProd = productsPrivade.findIndex(produ => produ.id == idProduct)
-        Carrinho.postProduct(productsPrivade[indexProd])
-        Carrinho.sendProductsCards()
-    }
-
-})
 
 cartBoddy.addEventListener("click", (event) => {
  
@@ -83,7 +74,7 @@ cartBoddy.addEventListener("click", (event) => {
     }
 
 })
-Carrinho.sendProductsCards()
+
 
 const menuDrop = document.querySelector('.menuDrop')
 menuDrop.addEventListener('click', controllerDrop)
