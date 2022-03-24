@@ -10,6 +10,7 @@ const productsList = await Api.getProduts()
 const productsPrivade = await Admin.getProducts(infoUser)
 const admin = document.querySelector('.linkAdmin')
 const logOut = document.querySelector('.buttonLogOut')
+const mainSection = document.querySelector('.product__Cards')
 
 if(infoUser != null){
     Controller.sendProductsCards(productsPrivade)
@@ -48,22 +49,30 @@ closeCart.addEventListener("click", () =>{
 
 })
 // fazer addEventListener no body do cart
-cartBoddy.addEventListener("click", (event) =>{
+//cartBoddy.addEventListener("click", (event) =>{
 
+    mainSection.addEventListener("click", (event) => {
+     
+        const btnBuy  = event.target
+        
+        if(btnBuy.tagName == "IMG"){
+    
+            const idProduto  = btnBuy.id
+
+            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduto)
+            Carrinho.postProduct(productsPrivade[indexProd])
+            Carrinho.sendProductsCards()
+        }
+    
+    })
 
 Carrinho.sendProductsCards()
 
-for(let i = 0; i < productsList.length; i++){
-    const addCartBtn = document.getElementById("btnToCart"+(i+1))
-    addCartBtn.addEventListener('click', () => {
-        Carrinho.postProduct(productsList[i])
-        Carrinho.sendProductsCards()
-
-    })
-}
-    if(event.target.id === "remove"){
-        // fazer um splice 
-        // cartCard.splice()
-    }
-})
+//}
+    // if(event.target.id === "remove"){
+    //     // fazer um splice 
+    //     // cartCard.splice()
+    // }
+//})
+console.log(productsPrivade)
 export {productsList,productsPrivade}

@@ -25,9 +25,9 @@ divQuantity.appendChild(quantityNum)
 divTotalPrice.appendChild(totalPrice)
 divTotalPrice.appendChild(totalPriceNum)
 
-// sectionCart.appendChild(divCartBody)
-// sectionCart.appendChild(divQuantity)
-// sectionCart.appendChild(divTotalPrice)
+sectionCart.appendChild(divCartBody)
+sectionCart.appendChild(divQuantity)
+sectionCart.appendChild(divTotalPrice)
 
 export class Carrinho{
 
@@ -85,7 +85,8 @@ export class Carrinho{
 
       this.products.push(produt)
       this.setLocalStorage()
-
+      divQuantity.style = "display: flex;"
+      divTotalPrice.style = "display: flex;"
     }
 
     static setLocalStorage(){

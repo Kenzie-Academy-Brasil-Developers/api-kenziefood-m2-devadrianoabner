@@ -23,7 +23,7 @@ class Models {
             <div class="product__Price">
                 <p class="product__Price--format" >R$ ${product.preco}</p>
                 <button class="product__Button" id="btnToCart${product.id}">
-                    <img class="product__Button--resize" src="./src/img/imagem_carrinho_figma.png" alt="carrinho">
+                    <img class="product__Button--resize" src="./src/img/imagem_carrinho_figma.png" alt="carrinho" id="${product.id}">
                 </button>
             </div>
             `
