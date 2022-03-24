@@ -42,7 +42,6 @@ class EditProduct {
             }
         }
         newProduct.categoria = this.categoria
-        console.log(newProduct)
         Admin.updateProducts(newProduct, token, id)
 
     }

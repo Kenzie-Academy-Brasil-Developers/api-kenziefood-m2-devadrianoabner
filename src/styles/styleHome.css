@@ -541,10 +541,8 @@ header {
     color: #000000;
 }
 .buttonLogOut{
-    height: 48px;
-    width: 117px;
-    left: 1268px;
-    top: 116px;
+    height: 21px;
+    width: 60px;
     border-radius: 32px;
     padding: 15px, 20px, 15px, 20px;
     background: #FF2253;
@@ -552,17 +550,36 @@ header {
     color:white;
     cursor: pointer;
 }
+
+.menuDrop{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    top:15px;
+    cursor: pointer;
+    border-radius: 50%;
+    }
+.menuDropItens{
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    background-color: #E9ECEF;
+    border-radius: 10px;
+    top: 40px;
+    right: 0;
+    }
+
+a{
+    text-decoration: none;
+    color:#868E96;
+    padding: 5px;
+    margin-bottom: 4px;
+}
+    
 @media (min-width: 425px) {
-    header,
-    a {
-        display: flex;
-        padding: 12px;
-    }
-    .user {
-        position: relative;
-        bottom: 60px;
-        left: 40px;
-    }
+
+ 
+
     .container_login {
         position: relative;
     }
@@ -622,10 +639,11 @@ header {
         width: 100%;
     }
     .buttonLogOut{
-        height: 48px;
-        width: 117px;
-        left: 1268px;
-        top: 116px;
+        height: 21px;
+        width: 67px;
+        position: absolute;
+        left: 10px;
+        bottom: 5px;
         border-radius: 32px;
         padding: 15px, 20px, 15px, 20px;
         background: #FF2253;
@@ -729,8 +747,6 @@ header {
     justify-content: space-between;
     padding: 0px 15px 0px 10px;
 }
-
-
 
     
 }
