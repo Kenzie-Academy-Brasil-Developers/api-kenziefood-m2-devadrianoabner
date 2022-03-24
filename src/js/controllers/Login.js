@@ -12,6 +12,9 @@ class Login {
        <label class="content__login--label" for="">Senha</label>
        <input class="content__login--input"name="password" type="password" placeholder="Senha">
        <button class='content__login--ButtonCadastro'>Login</button>
+       <span class="content__register-span">Volte para home. Clique em 
+                <a class="content__register-a"href="../../index.html">mim.</a>
+            </span>
        <span class='msgBadError'></span>
         </form>
        `

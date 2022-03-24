@@ -25,7 +25,7 @@ class Api {
         })
 
         switch (response.status) {
-            case 200:
+            case 201:
                 msgErro.innerText = ''
                 window.location.replace("./Login.html")
                 break;
@@ -46,18 +46,17 @@ class Api {
             },
             "body": JSON.stringify(data)
         })
-        const responseData =  await response.json()
-        
-        switch (responseData.status) {
-            case 'Error':
-                msgErro.innerText = 'Ops, aconteceu algo de errado, tente novamente.'
+        switch (response.status) {
+            case 200:
+                msgErro.innerText = ''
+                window.location.replace("../../index.html")
                 break;
                 default:
-                    msgErro.innerText = ''
-                    window.location.replace("../../index.html")
-                    adminHome.classList.remove('remover')
+                    msgErro.innerText = 'Ops, aconteceu algo de errado, tente novamente.'
                 break
         }
+        const responseData =  await response.json()
+        console.log(responseData)
         this.infoUser.autenticacao = responseData
         localStorage.setItem('@kenzie_food:token',JSON.stringify(Api.infoUser.autenticacao))
         return responseData
