@@ -53,7 +53,45 @@ closeCart.addEventListener("click", () =>{
     cart.style = "display:none;"             
 })
 
+// fazer addEventListener no body do cart
+//cartBoddy.addEventListener("click", (event) =>{
+
+    mainSection.addEventListener("click", (event) => {
+     
+        const btnBuy  = event.target
+        
+        if(btnBuy.tagName == "IMG"){
+    
+            const idProduct  = btnBuy.id
+
+            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduct)
+            Carrinho.postProduct(productsPrivade[indexProd])
+            Carrinho.sendProductsCards()
+        }
+    
+    })
+
+    cartBoddy.addEventListener("click", (event) => {
+     
+        const btnRemove  = event.target
+        
+        if(btnRemove.className == "imgTrash__cart--resize"){
+
+            const idProduct  = btnRemove.id
+
+            Carrinho.removeProduct(idProduct)
+            Carrinho.sendProductsCards()
+        }
+    
+    })
+    
+Carrinho.sendProductsCards()
+
+export {productsList,productsPrivade}
+=======
+
 const menuDrop = document.querySelector('.menuDrop')
 menuDrop.addEventListener('click',controllerDrop)
 
 export {productsList}
+

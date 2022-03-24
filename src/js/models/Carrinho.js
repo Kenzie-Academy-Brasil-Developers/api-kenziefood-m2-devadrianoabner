@@ -29,7 +29,7 @@ export class Carrinho{
                     <h3 class="productCart__price--format">${product.preco}</h3>
                 </div>
                 <button class="buttonProduct__remove">
-                <img src="./src/img/trash.png" class="imgTrash__cart--resize">
+                <img src="./src/img/trash.png" class="imgTrash__cart--resize" id="${product.id}">
                 </button>
           </div>`
       
@@ -98,6 +98,19 @@ export class Carrinho{
       }
      
   }
+
+  static removeProduct(id){
+    
+
+    let indexProduct = Carrinho.products.findIndex(item => item.id == Number(id))
+    Carrinho.products.splice(indexProduct, 1)
+    
+    quantityNum.innerText = Carrinho.products.length
+    Carrinho.totalValue()
+
+    localStorage.setItem('produtos', JSON.stringify(Carrinho.products))
+    Carrinho.sendProductsCards()
+    }
   
     static initDataBase(){
     this.getLocalStorage()
