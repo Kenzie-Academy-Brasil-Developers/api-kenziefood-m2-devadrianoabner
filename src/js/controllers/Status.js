@@ -4,37 +4,42 @@ class Status {
     static templateYes(name) {
         this.main.classList.remove('remover')
         this.main.innerHTML = `
-         <div class='content__status--element'>
-                <div class='content__status--elementTitle'>  
-                    <h2 class='content__status-title'>Status</h2>
-                </div>
-                <p class='content__status-text'>${name}</p>
-                <div class='content__status-colorGreen'></div>
-                <button class='buttonExit' type=button>X</button>
-         </div>
+        <div class="status__modal">
+        <div class="modal__title">
+            <p class="modal__title--format" >Status</p>
+            <button class="resmodal__title--resize" >X</button>
+            </div>
+            <div class="modal__description">
+            <p class="modal__description--format">${name}</p>
+            <div class="modal__color--resize"></div>
+            </div>
+    
+        </div>
         `
 
         setTimeout(()=>{
             this.main.classList.add('remover')
-        },10800)
+        },4000)
     }
 
+    
     static templateNo(name) {
         this.main.classList.remove('remover')
         this.main.innerHTML = `
-        
-                <div class='content__status--element'>
-                <div class='content__status--elementTitle'>  
-                <h2 class='content__status-title'>Status</h2>
-                </div>
-                <p class='content__status-text'>${name}</p>
-                <div class='content__status-colorRed'></div>
-                <button class='buttonExit' type=button>X</button>
-            </div>    
+        <div class="status__modal">
+        <div class="modal__title">
+            <p class="modal__title--format" >Status</p>
+            <button class="resmodal__title--resize" >X</button>
+            </div>
+            <div class="modal__description">
+            <p class="modal__description--format">${name}</p>
+            <div class="modal__color--resize style.background="#FF2253""></div>
+            </div>
+        </div>
         `
         setTimeout(()=>{
             this.main.classList.add('remover')
-        },10800)
+        },4000)
     }
 }
 

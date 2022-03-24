@@ -483,6 +483,76 @@ button:focus {
     border: none;
     
 }
+
+.status__modal{
+    position: relative;
+    width: 496px;
+    height: 135px;
+    border-radius: 8px 8px 8px 8px;
+    background: #F8F9FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .modal__title{
+    width: 90%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F8F9FA;
+    
+    }
+    
+    .modal__title--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    }
+    
+    .resmodal__title--resize{
+    border: none;
+    background: #E9ECEF;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #868E96;
+    width: 31px;
+    height: 30px;
+    
+    }
+    
+    .modal__description{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 40px;
+    background: #FFFFFF;
+    }
+    
+    .modal__description--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #212529;
+    }
+    
+    .modal__color--resize{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 8px;
+    width: 100%;
+    background: #39DF8F;
+    border-radius: 0px 0px 8px 8px;
+    }
 @media (min-width: 900px) {
     main {
         display: flex;
