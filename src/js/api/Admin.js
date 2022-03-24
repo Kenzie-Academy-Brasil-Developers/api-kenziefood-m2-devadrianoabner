@@ -27,7 +27,6 @@ class Admin {
                 Status.templateNo('Ocorreu algum erro, o produto não foi adicionado')
         }
         const responseData = await response.json()
-        console.log(responseData)
         return responseData
     }
 
@@ -48,7 +47,6 @@ class Admin {
                 Status.templateNo('Ocorreu algum erro, o produto não foi editado')
         }
         const responseData = await response.json()
-        console.log(responseData)
         return responseData
     }
 
@@ -67,8 +65,7 @@ class Admin {
             default:
                 Status.templateNo('Ocorreu algum erro, o produto não foi deletado')
         }
-        const responseData = await response
-        console.log(responseData)
+        const responseData = response
         return responseData
     }
 }

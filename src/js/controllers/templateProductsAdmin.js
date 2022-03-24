@@ -102,8 +102,8 @@ class ProductsAdmin {
                 e.preventDefault()
                 popUp.classList.add('remover')
                 ProductsAdmin.main.innerHTML = ''
-                await EditProduct.productForEdit(e.target, infoUser, id)
-                updateProducts()
+                 EditProduct.productForEdit(e.target, infoUser, id)
+                 await updateProducts()
             })
         }
 
@@ -120,7 +120,7 @@ class ProductsAdmin {
                 e.preventDefault()
                 ProductsAdmin.main.innerHTML = ''
                await Admin.deleteProduct(infoUser, id)
-                updateProducts()
+                await updateProducts()
                 popUp.classList.add('remover')
             })
             btnNo.addEventListener('click', () => {
@@ -152,9 +152,8 @@ class ProductsAdmin {
                 popUp.classList.add('remover')
                 ProductsAdmin.main.innerHTML = ''
                 await CreateProduct.createNewProduct(e.target, infoUser)
-                updateProducts()
+                await updateProducts()
                
-              
             })
         })
     }
