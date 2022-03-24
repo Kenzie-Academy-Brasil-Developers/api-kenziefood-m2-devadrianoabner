@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
     --color-primary: #FF2253;
     --color-primary-50: #FFE9EE;
@@ -338,7 +336,7 @@ header {
     height: 620px;
     position: absolute;
     bottom: 0px;
-    animation: 1.5s cartAnimation;
+    animation: 0.5s cartAnimation;
  }
 
  
@@ -350,7 +348,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    animation: 1.5s cartAnimation;
+    animation: 0.5s cartAnimation;
 }
 
 @keyframes cartAnimation{
@@ -552,6 +550,98 @@ header {
     color:white;
     cursor: pointer;
 }
+/* //////////////////////////////////////MODAL CRIAR CONTA/////////////////////////////////////// */
+
+.login__modal{
+    width: 400px;
+    height: 135px;
+    background: #f7f7f7;
+    border-radius: 8px 8px 8px 8px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.loginModal__title{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.loginModal__title--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.closeModal__title--resize{
+    width: 25px;
+    height: 24px;
+    background: #000000;
+    border-radius: 4px;
+    border:none;
+    cursor: pointer;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #868E96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginModal__description{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fdf8f8;
+}
+
+.loginModal__description--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #212529;
+
+}
+
+.loginModal__Button--resize{
+    display: flex;
+    width: 150px;
+    height: 48px;
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    box-sizing: border-box;
+    border-radius: 32px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+}
+
+.loginModal__Button--resize a{
+    text-decoration: none;
+    color: #F8F9FA;
+
+}
 @media (min-width: 425px) {
     header,
     a {
@@ -566,6 +656,98 @@ header {
     .container_login {
         position: relative;
     }
+    /* //////////////////////////////////////MODAL CRIAR CONTA/////////////////////////////////////// */
+
+.login__modal{
+    width: 400px;
+    height: 135px;
+    background: #f7f7f7;
+    border-radius: 8px 8px 8px 8px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.loginModal__title{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.loginModal__title--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.closeModal__title--resize{
+    width: 25px;
+    height: 24px;
+    background: #000000;
+    border-radius: 4px;
+    border:none;
+    cursor: pointer;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #868E96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginModal__description{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fdf8f8;
+}
+
+.loginModal__description--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #212529;
+
+}
+
+.loginModal__Button--resize{
+    display: flex;
+    width: 150px;
+    height: 48px;
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    box-sizing: border-box;
+    border-radius: 32px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+}
+
+.loginModal__Button--resize a{
+    text-decoration: none;
+    color: #F8F9FA;
+
+}
 }
 
 @media (min-width: 900px) {
@@ -730,7 +912,98 @@ header {
     padding: 0px 15px 0px 10px;
 }
 
+/* //////////////////////////////////////MODAL CRIAR CONTA/////////////////////////////////////// */
 
+.login__modal{
+    width: 450px;
+    height: 135px;
+    background: #f7f7f7;
+    border-radius: 8px 8px 8px 8px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.loginModal__title{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.loginModal__title--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.closeModal__title--resize{
+    width: 25px;
+    height: 24px;
+    background: #000000;
+    border-radius: 4px;
+    border:none;
+    cursor: pointer;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #868E96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginModal__description{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fdf8f8;
+}
+
+.loginModal__description--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #212529;
+
+}
+
+.loginModal__Button--resize{
+    display: flex;
+    width: 150px;
+    height: 48px;
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    box-sizing: border-box;
+    border-radius: 32px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+}
+
+.loginModal__Button--resize a{
+    text-decoration: none;
+    color: #F8F9FA;
+
+}
 
     
 }
@@ -1052,7 +1325,100 @@ header {
     font-size: 12.9375px;
     line-height: 14px;
     color: #000000;
+
 }
 
+/* //////////////////////////////////////MODAL CRIAR CONTA/////////////////////////////////////// */
+
+.login__modal{
+    width: 450px;
+    height: 135px;
+    background: #f7f7f7;
+    border-radius: 8px 8px 8px 8px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.loginModal__title{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.loginModal__title--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.closeModal__title--resize{
+    width: 25px;
+    height: 24px;
+    background: #000000;
+    border-radius: 4px;
+    border:none;
+    cursor: pointer;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #868E96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginModal__description{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fdf8f8;
+}
+
+.loginModal__description--format{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #212529;
+
+}
+
+.loginModal__Button--resize{
+    display: flex;
+    width: 150px;
+    height: 48px;
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    box-sizing: border-box;
+    border-radius: 32px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+}
+
+.loginModal__Button--resize a{
+    text-decoration: none;
+    color: #F8F9FA;
+
+}
 
 }

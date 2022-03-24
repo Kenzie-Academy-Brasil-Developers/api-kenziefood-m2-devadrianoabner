@@ -37,7 +37,18 @@ if(infoUser != null){
     filters(productsList)
     admin.classList.add('remover')
     logOut.classList.add('remover')
-   
+    
+    
+
+    mainSection.addEventListener("click", (event) => {
+     
+        const btnBuy  = event.target 
+        if(btnBuy.tagName == "IMG"){
+    
+            document.querySelector(".login__modal").style = "display: flex;"
+        }
+    })
+    
 }
 
 logOut.addEventListener('click',()=>{
@@ -60,6 +71,14 @@ closeCart.addEventListener("click", () =>{
     
     cart.style = "display:none;"
                 
+})
+
+//fechando o modal de registrar 
+let modalButtonRegisterClose = document.querySelector(".closeModal__title--resize")
+
+modalButtonRegisterClose.addEventListener("click", ()=>{
+
+    document.querySelector(".login__modal").style = "display: none;"
 })
 
 Carrinho.sendProductsCards()
