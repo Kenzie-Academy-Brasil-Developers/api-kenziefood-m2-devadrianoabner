@@ -671,12 +671,7 @@ header {
         display: flex;
         padding: 12px;
     }
-    .user {
-        position: relative;
-        bottom: 60px;
-        left: 40px;
 
-    }
 .menuDrop{
     width: 70px;
     height: 70px;
