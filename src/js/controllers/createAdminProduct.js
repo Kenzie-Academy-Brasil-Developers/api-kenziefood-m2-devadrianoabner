@@ -1,5 +1,6 @@
 import Api from "../api/Api.js"
 import { Admin } from "../api/Admin.js"
+
 class CreateProduct {
 
     static main = document.querySelector('.content__adminForm')
@@ -31,7 +32,7 @@ class CreateProduct {
         `
 
     }
-    static createNewProduct(data,token){
+    static async createNewProduct(data,token){
         let newProduct = {}
         
         for (let i = 0; i < data.length; i++) {
@@ -42,7 +43,7 @@ class CreateProduct {
         }
         newProduct.categoria = this.categoria
         console.log(newProduct)
-        Admin.createProducts(newProduct,token)
+        await Admin.createProducts(newProduct,token)
 
     }
 }

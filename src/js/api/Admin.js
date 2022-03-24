@@ -65,7 +65,7 @@ class Admin {
             default:
                 Status.templateNo('Ocorreu algum erro, o produto não foi deletado')
         }
-        const responseData = await response
+        const responseData = response
         return responseData
     }
 }
