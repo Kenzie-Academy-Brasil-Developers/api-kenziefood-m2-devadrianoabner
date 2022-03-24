@@ -21,7 +21,9 @@ input,
 button {
     font-family: 'Poppins';
 }
-
+.remover{
+    display: none;
+}
 .title1 {
     color: #000000;
     font-size: 16px;
@@ -727,5 +729,8 @@ header {
         position:absolute;
         bottom: 0px;
         width: 100%;
+    }
+    .remover{
+        display: none;
     }
 }
