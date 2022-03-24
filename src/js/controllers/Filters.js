@@ -6,9 +6,11 @@ const filters = (productsList) =>{
 
     const filtAll = document.querySelector(".filt__all")
     filtAll.addEventListener("click", () => {
-    
+        
         sectionOfProducts.innerHTML = ""
         Controller.sendProductsCards(productsList)
+        //ajustando posição dos produtos quando são filtrados
+        sectionOfProducts.style ="align-content: space-around;"
     
     })
     
@@ -16,8 +18,11 @@ const filters = (productsList) =>{
     filtPan.addEventListener("click", () => {
     
         const result = Filter.filterCategory(productsList, filtPan)
-    sectionOfProducts.innerHTML = ""
+        sectionOfProducts.innerHTML = ""
+        //ajustando posição dos produtos quando são filtrados
+        sectionOfProducts.style ="align-content: space-between;"
         
+
         Controller.sendProductsCards(result)
     })
     
@@ -27,6 +32,8 @@ const filters = (productsList) =>{
         const result = Filter.filterCategory(productsList, filtFruits)
         sectionOfProducts.innerHTML = ""
         Controller.sendProductsCards(result)
+         //ajustando posição dos produtos quando são filtrados
+         sectionOfProducts.style ="align-content: space-between;"
     })
     
     const filtDrinks = document.querySelector(".filt__drinks")
@@ -35,6 +42,8 @@ const filters = (productsList) =>{
         const result = Filter.filterCategory(productsList, filtDrinks)
         sectionOfProducts.innerHTML = ""
         Controller.sendProductsCards(result)
+         //ajustando posição dos produtos quando são filtrados
+         sectionOfProducts.style ="align-content: space-between;"
     })
     
     const searchLabel = document.querySelector(".input_search")
@@ -44,6 +53,8 @@ const filters = (productsList) =>{
         const result = Filter.filterSearchLabel(productsList, value)
         sectionOfProducts.innerHTML = ""
         Controller.sendProductsCards(result)
+         //ajustando posição dos produtos quando são filtrados
+         sectionOfProducts.style ="align-content: space-between;"
     })
 
 }

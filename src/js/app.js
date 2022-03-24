@@ -39,8 +39,10 @@ cartButton.addEventListener("click", () =>{
 })
 
 closeCart.addEventListener("click", () =>{
-
+    
+    
     cart.style = "display:none;"
+                
 
 })
 // fazer addEventListener no body do cart

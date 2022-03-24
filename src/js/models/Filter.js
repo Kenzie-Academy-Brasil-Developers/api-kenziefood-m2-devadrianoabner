@@ -15,7 +15,6 @@ export class Filter {
     static filterSearchLabel(products, inputValue) {
 
         const inputSearch = inputValue.toLowerCase()
-
         const productsFilt = products.filter((product) => {
           if (
             product.nome.toLowerCase().includes(inputSearch) ||
