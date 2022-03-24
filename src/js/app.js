@@ -57,22 +57,29 @@ closeCart.addEventListener("click", () =>{
         
         if(btnBuy.tagName == "IMG"){
     
-            const idProduto  = btnBuy.id
+            const idProduct  = btnBuy.id
 
-            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduto)
+            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduct)
             Carrinho.postProduct(productsPrivade[indexProd])
             Carrinho.sendProductsCards()
         }
     
     })
 
+    cartBoddy.addEventListener("click", (event) => {
+     
+        const btnRemove  = event.target
+        
+        if(btnRemove.className == "imgTrash__cart--resize"){
+
+            const idProduct  = btnRemove.id
+
+            Carrinho.removeProduct(idProduct)
+            Carrinho.sendProductsCards()
+        }
+    
+    })
+    
 Carrinho.sendProductsCards()
 
-//}
-    // if(event.target.id === "remove"){
-    //     // fazer um splice 
-    //     // cartCard.splice()
-    // }
-//})
-console.log(productsPrivade)
 export {productsList,productsPrivade}
