@@ -1,33 +1,11 @@
 const sectionCart = document.querySelector('.main__cart')
       
 const divCartBody = document.querySelector('.cart__body')
-const divQuantity = document.createElement('div')
-const divTotalPrice = document.createElement('div')
-const quantity = document.createElement('h3')
-const totalPrice = document.createElement('h3')
-const quantityNum = document.createElement('p')
-const totalPriceNum = document.createElement('p')
 
-divCartBody.classList.add('cart__body')
-divQuantity.classList.add('cart__footerQuantity')
-divTotalPrice.classList.add('cart__footerTotalPrice')
-quantity.classList.add("cart__footerQuantity--format")
-totalPrice.classList.add("cart__footerPrice--format")
-quantityNum.classList.add("cart__footerQuantity__Number--format")
-totalPriceNum.classList.add("cart__footerPrice__Number--format")
-
-quantity.innerText = 'Quantidade'
-totalPrice.innerText = 'Total'
-totalPriceNum.innerText = 0
-
-divQuantity.appendChild(quantity)
-divQuantity.appendChild(quantityNum)
-divTotalPrice.appendChild(totalPrice)
-divTotalPrice.appendChild(totalPriceNum)
-
-sectionCart.appendChild(divCartBody)
-sectionCart.appendChild(divQuantity)
-sectionCart.appendChild(divTotalPrice)
+const quantityNum = document.querySelector('.cart__footerQuantity__Number--format')
+const totalPriceNum = document.querySelector('.cart__footerPrice__Number--format')
+const divQuantity = document.querySelector('.cart__footerQuantity')
+const divTotalPrice = document.querySelector('.cart__footerTotalPrice')
 
 export class Carrinho{
 
@@ -87,6 +65,7 @@ export class Carrinho{
       this.setLocalStorage()
       divQuantity.style = "display: flex;"
       divTotalPrice.style = "display: flex;"
+      divCartBody.style = "background-image: none"
     }
 
     static setLocalStorage(){
