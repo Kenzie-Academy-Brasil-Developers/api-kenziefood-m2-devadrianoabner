@@ -7,7 +7,6 @@ class Admin {
     static async getProducts(token) {
         const response = await fetch(`${this.URL_API}my/products`, { headers: { Authorization: `Bearer ${token}` } })
         const dataResponse = await response.json()
-
         return dataResponse
 
     }
@@ -28,7 +27,6 @@ class Admin {
                 Status.templateNo('Ocorreu algum erro, o produto não foi adicionado')
         }
         const responseData = await response.json()
-        console.log(responseData)
         return responseData
     }
 
@@ -49,7 +47,6 @@ class Admin {
                 Status.templateNo('Ocorreu algum erro, o produto não foi editado')
         }
         const responseData = await response.json()
-        console.log(responseData)
         return responseData
     }
 
@@ -70,7 +67,7 @@ class Admin {
                 Status.templateNo('Ocorreu algum erro, o produto não foi adicionado')
         }
         const responseData = await response.json()
-        console.log(responseData)
+
         return responseData
     }
 }

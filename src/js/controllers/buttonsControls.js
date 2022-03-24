@@ -7,6 +7,7 @@ import { EditProduct } from "../controllers/EditAdminProduct.js";
 const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
 
 const controllerButtons = () => {
+
     const createProducts = document.querySelector('.createProductAdmin')
     const teste = document.querySelector('.testeEdit')
     const popUp = document.querySelector('.content__adminForm')

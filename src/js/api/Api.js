@@ -50,7 +50,7 @@ class Api {
         switch (response.status) {
             case 200:
                 msgErro.innerText = ''
-                window.location.replace("../../index.html")
+                // window.location.replace("../../index.html")
                 break;
                 default:
                     msgErro.innerText = 'Ops, aconteceu algo de errado, tente novamente.'
