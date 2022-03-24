@@ -6,6 +6,8 @@ const quantityNum = document.querySelector('.cart__footerQuantity__Number--forma
 const totalPriceNum = document.querySelector('.cart__footerPrice__Number--format')
 const divQuantity = document.querySelector('.cart__footerQuantity')
 const divTotalPrice = document.querySelector('.cart__footerTotalPrice')
+const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
+
 
 export class Carrinho{
 
@@ -60,12 +62,13 @@ export class Carrinho{
     }
 
     static postProduct(produt){
+      
+        this.products.push(produt)
+        this.setLocalStorage()
+        divQuantity.style = "display: flex;"
+        divTotalPrice.style = "display: flex;"
+        divCartBody.style = "background-image: none"
 
-      this.products.push(produt)
-      this.setLocalStorage()
-      divQuantity.style = "display: flex;"
-      divTotalPrice.style = "display: flex;"
-      divCartBody.style = "background-image: none"
     }
 
     static setLocalStorage(){

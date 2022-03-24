@@ -7,21 +7,36 @@ import { filters } from "./controllers/Filters.js";
 
 const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
 const productsList = await Api.getProduts()
-const productsPrivade = await Admin.getProducts(infoUser)
 const admin = document.querySelector('.linkAdmin')
 const logOut = document.querySelector('.buttonLogOut')
 const mainSection = document.querySelector('.product__Cards')
 
 if(infoUser != null){
+    const productsPrivade = await Admin.getProducts(infoUser)
     Controller.sendProductsCards(productsPrivade)
     filters(productsPrivade)
     admin.classList.remove('remover')
     logOut.classList.remove('remover')
+    mainSection.addEventListener("click", (event) => {
+     
+        const btnBuy  = event.target
+        
+        if(btnBuy.tagName == "IMG"){
+    
+            const idProduto  = btnBuy.id
+
+            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduto)
+            Carrinho.postProduct(productsPrivade[indexProd])
+            Carrinho.sendProductsCards()
+        }
+    })
+
 }else{
     Controller.sendProductsCards(productsList)
     filters(productsList)
     admin.classList.add('remover')
     logOut.classList.add('remover')
+   
 }
 
 logOut.addEventListener('click',()=>{
@@ -51,20 +66,7 @@ closeCart.addEventListener("click", () =>{
 // fazer addEventListener no body do cart
 //cartBoddy.addEventListener("click", (event) =>{
 
-    mainSection.addEventListener("click", (event) => {
-     
-        const btnBuy  = event.target
-        
-        if(btnBuy.tagName == "IMG"){
     
-            const idProduto  = btnBuy.id
-
-            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduto)
-            Carrinho.postProduct(productsPrivade[indexProd])
-            Carrinho.sendProductsCards()
-        }
-    
-    })
 
 Carrinho.sendProductsCards()
 
@@ -74,5 +76,5 @@ Carrinho.sendProductsCards()
     //     // cartCard.splice()
     // }
 //})
-console.log(productsPrivade)
-export {productsList,productsPrivade}
+
+export {productsList}
