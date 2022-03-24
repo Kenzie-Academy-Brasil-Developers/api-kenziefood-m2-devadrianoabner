@@ -1,15 +1,27 @@
+import { Admin } from "./api/Admin.js";
 import Api from "./api/Api.js";
 import { Controller } from "./controllers/controller.js";
 import { filters } from "./controllers/Filters.js";
 
-
+const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
 const productsList = await Api.getProduts()
-const louOut = document.querySelector('.buttonLogOut')
-Controller.sendProductsCards(productsList)
-filters(productsList)
+const productsPrivade = await Admin.getProducts(infoUser)
+const admin = document.querySelector('.linkAdmin')
+const logOut = document.querySelector('.buttonLogOut')
 
+if(infoUser != null){
+    Controller.sendProductsCards(productsPrivade)
+    filters(productsPrivade)
+    admin.classList.remove('remover')
+    logOut.classList.remove('remover')
+}else{
+    Controller.sendProductsCards(productsList)
+    filters(productsList)
+    admin.classList.add('remover')
+    logOut.classList.add('remover')
+}
 
-louOut.addEventListener('click',()=>{
+logOut.addEventListener('click',()=>{
     window.location.replace("./src/pages/Login.html")
     localStorage.clear('@kenzie_food:token')
 })
@@ -39,4 +51,4 @@ cartBoddy.addEventListener("click", (event) =>{
         // cartCard.splice()
     }
 })
-export {productsList}
+export {productsList,productsPrivade}
