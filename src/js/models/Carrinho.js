@@ -1,29 +1,29 @@
-const sectionCart = document.querySelector('.main__cart')
+// const sectionCart = document.querySelector('.main__cart')
       
-const divCartBody = document.createElement('div')
-const divQuantity = document.createElement('div')
-const divTotalPrice = document.createElement('div')
-const quantity = document.createElement('h3')
-const totalPrice = document.createElement('h3')
-const quantityNum = document.createElement('p')
-const totalPriceNum = document.createElement('p')
+// const divCartBody = document.createElement('div')
+// const divQuantity = document.createElement('div')
+// const divTotalPrice = document.createElement('div')
+// const quantity = document.createElement('h3')
+// const totalPrice = document.createElement('h3')
+// const quantityNum = document.createElement('p')
+// const totalPriceNum = document.createElement('p')
 
-divCartBody.classList.add('cart__body')
-divQuantity.classList.add('cart__footerQuantity')
-divTotalPrice.classList.add('cart__footerTotalPrice')
-quantity.classList.add("cart__footerQuantity--format")
-totalPrice.classList.add("cart__footerPrice--format")
-quantityNum.classList.add("cart__footerQuantity__Number--format")
-totalPriceNum.classList.add("cart__footerPrice__Number--format")
+// divCartBody.classList.add('cart__body')
+// divQuantity.classList.add('cart__footerQuantity')
+// divTotalPrice.classList.add('cart__footerTotalPrice')
+// quantity.classList.add("cart__footerQuantity--format")
+// totalPrice.classList.add("cart__footerPrice--format")
+// quantityNum.classList.add("cart__footerQuantity__Number--format")
+// totalPriceNum.classList.add("cart__footerPrice__Number--format")
 
-quantity.innerText = 'Quantidade'
-totalPrice.innerText = 'Total'
-totalPriceNum.innerText = 0
+// quantity.innerText = 'Quantidade'
+// totalPrice.innerText = 'Total'
+// totalPriceNum.innerText = 0
 
-divQuantity.appendChild(quantity)
-divQuantity.appendChild(quantityNum)
-divTotalPrice.appendChild(totalPrice)
-divTotalPrice.appendChild(totalPriceNum)
+// divQuantity.appendChild(quantity)
+// divQuantity.appendChild(quantityNum)
+// divTotalPrice.appendChild(totalPrice)
+// divTotalPrice.appendChild(totalPriceNum)
 
 // sectionCart.appendChild(divCartBody)
 // sectionCart.appendChild(divQuantity)
