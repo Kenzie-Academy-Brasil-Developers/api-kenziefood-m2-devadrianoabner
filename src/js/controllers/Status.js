@@ -22,7 +22,7 @@ class Status {
         },4000)
     }
 
-    
+
     static templateNo(name) {
         this.main.classList.remove('remover')
         this.main.innerHTML = `
@@ -33,7 +33,7 @@ class Status {
             </div>
             <div class="modal__description">
             <p class="modal__description--format">${name}</p>
-            <div class="modal__color--resize style.background="#FF2253""></div>
+            <div class="modal__color--resizeRed"></div>
             </div>
         </div>
         `

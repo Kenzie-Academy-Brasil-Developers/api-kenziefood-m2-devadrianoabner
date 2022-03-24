@@ -2,16 +2,21 @@ import { Admin } from "../api/Admin.js";
 import { CreateProduct } from "./createAdminProduct.js";
 import { Delete } from "./deleteAdminProduct.js";
 import { EditProduct } from "./EditAdminProduct.js";
+import { updateProducts } from "./updateProducts.js";
+
+
 const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
-class productsAdmin {
 
 
+class ProductsAdmin {
+
+    static main = document.getElementById('list')
     static createTemplate(products) {
         const createProducts = document.querySelector('.createProductAdmin')
-        const teste = document.querySelector('.testeEdit')
         const popUp = document.querySelector('.content__adminForm')
+
         products.forEach(product => {
-            const div1 = document.getElementById('list');
+            
 
             let imgProduct = document.createElement('img')
             imgProduct.classList.add('imgProduct')
@@ -19,23 +24,35 @@ class productsAdmin {
             imgProduct.alt = product.nome
             let div2 = document.createElement('div');
             div2.className = "product-detail";
-            
-            div1.appendChild(div2);
+
+            this.main.appendChild(div2);
+            let divImg = document.createElement('div');
+            divImg.className = 'divImg'; //flex, row
+            div2.appendChild(divImg);
+
+            let imgDiv = document.createElement('img');
+            imgDiv.src = product.imagem;
+            imgDiv.className = 'imgDiv'; //tamanho e radius pra deixar redonda
+            divImg.appendChild(imgDiv);
 
             let p1 = document.createElement('p');
+            p1.classList.add('textList')
             p1.innerText = product.nome;
             div2.appendChild(p1);
 
             let p2 = document.createElement('p');
+            p2.classList.add('textList')
             p2.innerText = product.categoria;
             div2.appendChild(p2);
 
             let p3 = document.createElement('p');
+            p3.classList.add('textList')
             p3.innerText = product.descricao;
             div2.appendChild(p3);
 
             let div3 = document.createElement('div');
             div2.appendChild(div3);
+
 
             let button1 = document.createElement('button');
             button1.className = 'button1';
@@ -81,28 +98,29 @@ class productsAdmin {
                 e.preventDefault()
                 popUp.classList.add('remover')
             })
-            form.addEventListener('submit', async(e) => {
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault()
                 popUp.classList.add('remover')
-                EditProduct.productForEdit(e.target, infoUser, id)
-                await Admin.getProducts(infoUser)
+                ProductsAdmin.main.innerHTML = ''
+                await EditProduct.productForEdit(e.target, infoUser, id)
+                updateProducts()
             })
         }
 
         function deleteItem(e) {
             CreateProduct.main.innerHTML = ''
             let id = e.target.id
-            console.log(id)
             Delete.createTemplate()
             popUp.classList.remove('remover')
             const btnYes = document.querySelector('.buttonYes')
             const btnNo = document.querySelector('.buttonNo')
             const btnPopUp = document.querySelector('.buttonPopUp')
 
-            btnYes.addEventListener('click', async(e) => {
+            btnYes.addEventListener('click', async (e) => {
                 e.preventDefault()
-                Admin.deleteProduct(infoUser, id)
-                 await Admin.getProducts(infoUser)
+                ProductsAdmin.main.innerHTML = ''
+               await Admin.deleteProduct(infoUser, id)
+                updateProducts()
                 popUp.classList.add('remover')
             })
             btnNo.addEventListener('click', () => {
@@ -114,7 +132,6 @@ class productsAdmin {
 
             })
         }
-
 
         createProducts.addEventListener('click', () => {
             CreateProduct.createTemplate()
@@ -130,16 +147,17 @@ class productsAdmin {
             addButton.addEventListener('click', (e) => {
                 CreateProduct.categoria = e.target.value
             })
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', async(e) => {
                 e.preventDefault()
                 popUp.classList.add('remover')
-                CreateProduct.createNewProduct(e.target, infoUser)
+                ProductsAdmin.main.innerHTML = ''
+                await CreateProduct.createNewProduct(e.target, infoUser)
+                updateProducts()
+               
+              
             })
         })
-
-
     }
-
 }
 
-export { productsAdmin }
+export { ProductsAdmin }
