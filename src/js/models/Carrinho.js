@@ -14,7 +14,7 @@ export class Carrinho{
     static products = []
     
     static interfaceCarrinho(product){
-
+      
       let cardCart = document.createElement("div")
         cardCart.classList.add("cardCart__Product")
 
@@ -44,11 +44,13 @@ export class Carrinho{
 
       this.getLocalStorage().forEach(product =>{
           this.interfaceCarrinho(product)
+          console.log(product)
       })
   }
 
     static totalValue() {
 
+    
         const total = this.products.reduce((total, product) => {
           const productPrice = product.preco;
           return total + Number(productPrice);
@@ -61,9 +63,9 @@ export class Carrinho{
       return this.products
     }
 
-    static postProduct(produt){
+    static postProduct(product){
       
-        this.products.push(produt)
+        this.products.push(product)
         this.setLocalStorage()
         divQuantity.style = "display: flex;"
         divTotalPrice.style = "display: flex;"

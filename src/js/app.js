@@ -61,6 +61,7 @@ closeCart.addEventListener("click", () => {
 })
 
 
+
 cartBoddy.addEventListener("click", (event) => {
  
     const btnRemove  = event.target
