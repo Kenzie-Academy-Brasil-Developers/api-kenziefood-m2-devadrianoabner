@@ -1,6 +1,6 @@
 const sectionCart = document.querySelector('.main__cart')
       
-const divCartBody = document.createElement('div')
+const divCartBody = document.querySelector('.cart__body')
 const divQuantity = document.createElement('div')
 const divTotalPrice = document.createElement('div')
 const quantity = document.createElement('h3')
