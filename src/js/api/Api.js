@@ -3,7 +3,7 @@ import Register from "../controllers/Register.js"
 class Api {
 
     static API_URL = "https://kenzie-food-api.herokuapp.com/"
-    static  infoUser = {
+    static infoUser = {
         autenticacao: {},
         informacoes: {}
     }
@@ -44,19 +44,19 @@ class Api {
             },
             "body": JSON.stringify(data)
         })
-        const responseData =  await response.json()
-        
+        const responseData = await response.json()
+
         switch (responseData.status) {
             case 'Error':
                 msgErro.innerText = 'Ops, aconteceu algo de errado, tente novamente.'
                 break;
-                default:
-                    msgErro.innerText = ''
-                    window.location.replace("../../index.html")
+            default:
+                msgErro.innerText = ''
+                    // window.location.replace("../../index.html")
                 break
         }
         this.infoUser.autenticacao = responseData
-        localStorage.setItem('@kenzie_food:token',JSON.stringify(Api.infoUser.autenticacao))
+        localStorage.setItem('@kenzie_food:token', JSON.stringify(Api.infoUser.autenticacao))
         return responseData
     }
 }

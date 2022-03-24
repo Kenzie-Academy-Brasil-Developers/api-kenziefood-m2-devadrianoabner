@@ -6,7 +6,7 @@ class Admin {
         const response = await fetch(`${this.URL_API}my/products`, { headers: { Authorization: `Bearer ${token}` } })
         const dataResponse = await response.json()
 
-        console.log(dataResponse)
+        return dataResponse;
     }
     static async createProducts(data, token) {
         const response = await fetch(`${this.URL_API}my/products`, {

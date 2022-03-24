@@ -69,7 +69,7 @@ button {
 }
 
 .container {
-    max-width: 1685px;
+    max-width: 965px;
     width: 100%;
 }
 
@@ -204,7 +204,7 @@ section>* {
 
 .product-header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 200px;
+    grid-template-columns: 1fr 1fr 1fr 100px;
     color: #868E96;
 }
 
@@ -224,7 +224,7 @@ section>* {
 
 .product-detail {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 200px;
+    grid-template-columns: 1fr 1fr 1fr 100px;
     align-items: center;
 }
 
@@ -360,12 +360,12 @@ button:focus {
 }
 
 .createProductAdmin {
-    position: absolute;
-    height: 48px;
-    width: 217px;
-    left: 100%;
-    border-radius: 32px;
-    padding: 15px, 20px, 15px, 20px;
+    /* position: absolute; */
+    /* height: 48px; */
+    /* width: 217px; */
+    /* left: 100%; */
+    /* border-radius: 32px; */
+    /* padding: 15px, 20px, 15px, 20px; */
     background: #FF2253;
     border: 1.5px solid #FF2253;
     color: white;
