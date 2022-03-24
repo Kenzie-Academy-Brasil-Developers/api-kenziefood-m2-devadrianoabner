@@ -348,14 +348,14 @@ header {
     width: 345px;
     height: 620px;
     position: absolute;
-    bottom: -250px;
+    bottom: -85px;
     animation: 2s cartAnimation;
     
  }
 
  @keyframes cartAnimation{
      0%   {bottom: -1000px;}
-     100% {bottom: -250px;}
+     100% {bottom: -85px;}
  }
 
 .cart__header{
@@ -404,7 +404,7 @@ header {
 
 .cart__body{
     width: 100%;
-    height: 436.64px;
+    height: 360px;
     background: #FFFFFF;
     overflow-y: scroll;
 }
