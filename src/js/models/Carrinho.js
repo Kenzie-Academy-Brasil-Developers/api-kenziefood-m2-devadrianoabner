@@ -25,9 +25,9 @@ divQuantity.appendChild(quantityNum)
 divTotalPrice.appendChild(totalPrice)
 divTotalPrice.appendChild(totalPriceNum)
 
-sectionCart.appendChild(divCartBody)
-sectionCart.appendChild(divQuantity)
-sectionCart.appendChild(divTotalPrice)
+// sectionCart.appendChild(divCartBody)
+// sectionCart.appendChild(divQuantity)
+// sectionCart.appendChild(divTotalPrice)
 
 export class Carrinho{
 
