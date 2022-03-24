@@ -85,7 +85,7 @@ export class Carrinho{
       
       if(typeof productsJson === "string"){
           
-          const productsCart   =  JSON.parse(productsJson)
+          const productsCart  =  JSON.parse(productsJson)
 
           this.products = productsCart 
 
@@ -101,7 +101,6 @@ export class Carrinho{
 
   static removeProduct(id){
     
-
     let indexProduct = Carrinho.products.findIndex(item => item.id == Number(id))
     Carrinho.products.splice(indexProduct, 1)
     

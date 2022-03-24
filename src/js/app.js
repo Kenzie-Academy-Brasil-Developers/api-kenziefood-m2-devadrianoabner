@@ -71,24 +71,21 @@ closeCart.addEventListener("click", () =>{
     
     })
 
-    cartBoddy.addEventListener("click", (event) => {
+    // cartBoddy.addEventListener("click", (event) => {
      
-        const btnRemove  = event.target
+    //     const btnRemove  = event.target
         
-        if(btnRemove.className == "imgTrash__cart--resize"){
+    //     if(btnRemove.className == "imgTrash__cart--resize"){
 
-            const idProduct  = btnRemove.id
+    //         const idProduct  = btnRemove.id
 
-            Carrinho.removeProduct(idProduct)
-            Carrinho.sendProductsCards()
-        }
+    //         Carrinho.removeProduct(idProduct)
+    //         Carrinho.sendProductsCards()
+    //     }
     
-    })
+    // })
     
 Carrinho.sendProductsCards()
-
-export {productsList,productsPrivade}
-=======
 
 const menuDrop = document.querySelector('.menuDrop')
 menuDrop.addEventListener('click',controllerDrop)
