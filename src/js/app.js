@@ -17,6 +17,7 @@ if(infoUser != null){
     filters(productsPrivade)
     admin.classList.remove('remover')
     logOut.classList.remove('remover')
+
     mainSection.addEventListener("click", (event) => {
      
         const btnBuy  = event.target
@@ -41,14 +42,13 @@ if(infoUser != null){
 
 logOut.addEventListener('click',()=>{
     window.location.replace("./src/pages/Login.html")
-    localStorage.clear('@kenzie_food:token')
+    localStorage.clear()
 })
+
 //ativando botão do carrinho versão mobile
 const cart = document.querySelector(".main__cart")
 const cartButton = document.querySelector(".cart__button")
 const closeCart = document.querySelector(".cart__header__button")
-const cartBoddy = document.querySelector(".cart__body")
-const cartCard = document.querySelector(".cart_cardBody")
 
 cartButton.addEventListener("click", () =>{
 
@@ -58,23 +58,10 @@ cartButton.addEventListener("click", () =>{
 
 closeCart.addEventListener("click", () =>{
     
-    
     cart.style = "display:none;"
                 
-
 })
-// fazer addEventListener no body do cart
-//cartBoddy.addEventListener("click", (event) =>{
-
-    
 
 Carrinho.sendProductsCards()
-
-//}
-    // if(event.target.id === "remove"){
-    //     // fazer um splice 
-    //     // cartCard.splice()
-    // }
-//})
 
 export {productsList}
