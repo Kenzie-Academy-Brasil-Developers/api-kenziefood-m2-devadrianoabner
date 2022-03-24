@@ -563,10 +563,16 @@ button:focus {
     }
     .content__status{
         position: relative;
-        left: 70%;
+        left: 78%;
     }
     .modal__color--resizeRed{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        height: 8px;
+        width: 100%;
         background: red;
+        border-radius: 0px 0px 8px 8px;
     }
 @media (min-width: 900px) {
     main {
@@ -600,4 +606,15 @@ button:focus {
     .createProductAdmin {
         left: 70%;
     }
+    
+    .opacity {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: #00000080;
+    bottom: 46givw;
+    opacity: 1.5;
+    width: 100%;
+    height: 130vh;
+}
 }

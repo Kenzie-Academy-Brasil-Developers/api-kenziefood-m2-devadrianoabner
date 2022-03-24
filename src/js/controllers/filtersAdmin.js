@@ -1,6 +1,7 @@
 import { Filter } from "../models/Filter.js"
 import { Controller } from "./controller.js";
 import { ProductsAdmin } from "./templateProductsAdmin.js";
+
 const filtersAdmin = (productsList) =>{
     const sectionOfProducts = document.querySelector(".product-list")
 
