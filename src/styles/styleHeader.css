@@ -595,6 +595,10 @@ button:focus {
         top: 40px;
         right: 0;
     }
+    .imgButton{
+        pointer-events: none;
+    }
+    
 @media (min-width: 900px) {
     main {
         display: flex;
