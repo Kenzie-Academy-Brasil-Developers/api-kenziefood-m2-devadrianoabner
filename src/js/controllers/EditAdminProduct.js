@@ -32,7 +32,7 @@ class EditProduct {
         `
 
     }
-    static productForEdit(data, token, id) {
+    static async productForEdit(data, token, id) {
         let newProduct = {}
 
         for (let i = 0; i < data.length; i++) {
@@ -42,7 +42,7 @@ class EditProduct {
             }
         }
         newProduct.categoria = this.categoria
-        Admin.updateProducts(newProduct, token, id)
+       await Admin.updateProducts(newProduct, token, id)
 
     }
 }

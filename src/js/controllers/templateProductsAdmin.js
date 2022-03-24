@@ -53,7 +53,6 @@ class ProductsAdmin {
             let div3 = document.createElement('div');
             div2.appendChild(div3);
 
-
             let button1 = document.createElement('button');
             button1.className = 'button1';
             button1.id = product.id
@@ -61,6 +60,7 @@ class ProductsAdmin {
             div3.appendChild(button1);
 
             let img1 = document.createElement('img');
+            img1.classList.add('imgButton')
             img1.src = "../img/edit.svg";
             button1.appendChild(img1);
 
@@ -71,6 +71,7 @@ class ProductsAdmin {
             div3.appendChild(button2);
 
             let img2 = document.createElement('img');
+            img2.classList.add('imgButton')
             img2.src = "../img/trash.svg";
             button2.appendChild(img2);
         });
