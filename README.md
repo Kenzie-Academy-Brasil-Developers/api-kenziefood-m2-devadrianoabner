@@ -136,6 +136,13 @@ Enviar um JSON com pelo menos uma das informações do produto a ser alterada, e
 }
 ```
 
+
+
+
+
+
+
+
 ### Resposta: Status 202 Accepted
 ```json
 {
