@@ -12,34 +12,35 @@ const productsList = await Api.getProduts()
 const admin = document.querySelector('.linkAdmin')
 const logOut = document.querySelector('.buttonLogOut')
 const mainSection = document.querySelector('.product__Cards')
+const productsPrivade = await Admin.getProducts(infoUser)
 
 if (infoUser != null && infoUser.error == undefined) {
-
-    const productsPrivade = await Admin.getProducts(infoUser)
     Controller.sendProductsCards(productsPrivade)
     filters(productsPrivade)
     admin.classList.remove('remover')
     logOut.classList.remove('remover')
-    mainSection.addEventListener("click", (event) => {
-
-        const btnBuy = event.target
-
-        if (btnBuy.tagName == "IMG") {
-
-            const idProduct = btnBuy.id
-
-            let indexProd = productsPrivade.findIndex(produ => produ.id == idProduct)
-            Carrinho.postProduct(productsPrivade[indexProd])
-            Carrinho.sendProductsCards()
-        }
-
-    })
 
 } else {
     Controller.sendProductsCards(productsList)
     filters(productsList)
     admin.classList.add('remover')
     logOut.classList.add('remover')
+
+
+
+
+    mainSection.addEventListener("click", (event) => {
+
+        const btnBuy = event.target
+        if (btnBuy.tagName == "IMG") {
+
+            document.querySelector(".modal").style = "display: flex;"
+            cartaux.style = "display:flex";
+        }
+    })
+
+
+
 }
 logOut.addEventListener('click', () => {
     window.location.replace("./src/pages/Login.html")
@@ -52,6 +53,20 @@ const cartButton = document.querySelector(".cart__button")
 const closeCart = document.querySelector(".cart__header__button")
 const cartBoddy = document.querySelector('.cart__body')
 const cartaux = document.querySelector(".main__cart__aux")
+mainSection.addEventListener("click", (event) => {
+
+    const btnBuy = event.target
+
+    if (btnBuy.tagName == "IMG") {
+
+        const idProduct = btnBuy.id
+
+        let indexProd = productsPrivade.findIndex(produ => produ.id == idProduct)
+        Carrinho.postProduct(productsPrivade[indexProd])
+        Carrinho.sendProductsCards()
+    }
+
+})
 cartButton.addEventListener("click", () => {
     cart.style = "display:flex;";
     cartaux.style = "display:block";
@@ -63,12 +78,25 @@ closeCart.addEventListener("click", () => {
 })
 
 
+//fechando o modal de registrar 
+let modalButtonRegisterClose = document.querySelector(".closeModal__title--resize")
+
+modalButtonRegisterClose.addEventListener("click", () => {
+
+    document.querySelector(".modal").style = "display: none;"
+    cartaux.style = "display:none";
+})
+
+Carrinho.sendProductsCards()
+
+
+
 
 cartBoddy.addEventListener("click", (event) => {
 
     const btnRemove = event.target
 
-    if (btnRemove.className == "imgTrash__cart--resize") {
+    if (btnRemove.className == "imgTrash__cart--resize" || btnRemove.className == "buttonProduct__remove") {
 
         const idProduct = btnRemove.id
 

@@ -75,10 +75,12 @@ class ProductsAdmin {
             img2.src = "../img/trash.svg";
             button2.appendChild(img2);
         });
+
         function editItem(e) {
+
             CreateProduct.main.innerHTML = ''
             let id = e.target.id
-            console.log(id)
+         
             EditProduct.createTemplate()
             popUp.classList.remove('remover')
             const addButton = document.querySelector('.content__buttons')
@@ -103,7 +105,7 @@ class ProductsAdmin {
                 e.preventDefault()
                 popUp.classList.add('remover')
                 ProductsAdmin.main.innerHTML = ''
-                 EditProduct.productForEdit(e.target, infoUser, id)
+                 await EditProduct.productForEdit(e.target, infoUser, id)
                  await updateProducts()
             })
         }
@@ -135,6 +137,7 @@ class ProductsAdmin {
         }
 
         createProducts.addEventListener('click', () => {
+
             CreateProduct.createTemplate()
             popUp.classList.remove('remover')
             const addButton = document.querySelector('.content__buttons')
