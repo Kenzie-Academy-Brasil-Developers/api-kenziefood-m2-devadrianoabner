@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 :root {
     --color-primary: #FF2253;
     --color-primary-50: #FFE9EE;
@@ -71,7 +72,7 @@ button {
 .container {
     max-width: 965px;
     width: 190%;
-   
+
 }
 
 main {
@@ -139,7 +140,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
 .btn-container::-webkit-scrollbar {
@@ -207,10 +208,10 @@ header {
     cursor: pointer;
 }
 
-section>*{
+section>* {
     margin-top: 60px;
     margin-bottom: 32px;
-    
+
 }
 
 .product-header {
@@ -237,7 +238,7 @@ section>*{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 100px;
     align-items: center;
-   
+
 }
 
 .product-detail>* {
@@ -382,21 +383,24 @@ button:focus {
     width: 100%;
     height: 130vh;
 }
-.buttonLogOut{
+
+.buttonLogOut {
     margin-left: 16px;
     margin-top: 60px;
     background-color: white;
     border: 1px black;
-    color:black;
+    color: black;
     border-radius: 8px;
     cursor: pointer;
 }
-.buttonLogOut:hover{
-    
+
+.buttonLogOut:hover {
+
     background: #FF2253;
     border: 1.5px solid #FF2253;
     color: white;
 }
+
 .remover {
     display: none;
 }
@@ -494,23 +498,25 @@ button:focus {
     cursor: pointer;
 }
 
-.imgDiv{
-   
+.imgDiv {
+
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    
+
 }
-.product-detail{
+
+.product-detail {
     display: flex;
-   justify-content:space-between;
+    justify-content: space-between;
 }
-.textList{
+
+.textList {
     width: 150px;
     overflow-y: hidden;
 }
 
-.status__modal{
+.status__modal {
     position: relative;
     width: 496px;
     height: 135px;
@@ -520,28 +526,28 @@ button:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    }
-    
-    .modal__title{
+}
+
+.modal__title {
     width: 90%;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #F8F9FA;
-    
-    }
-    
-    .modal__title--format{
+
+}
+
+.modal__title--format {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
     color: #000000;
-    }
-    
-    .resmodal__title--resize{
+}
+
+.resmodal__title--resize {
     border: none;
     background: #E9ECEF;
     border-radius: 4px;
@@ -549,28 +555,28 @@ button:focus {
     color: #868E96;
     width: 31px;
     height: 30px;
-    
-    }
-    
-    .modal__description{
+
+}
+
+.modal__description {
     width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
     padding: 0px 0px 0px 40px;
     background: #FFFFFF;
-    }
-    
-    .modal__description--format{
+}
+
+.modal__description--format {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: #212529;
-    }
-    
-    .modal__color--resize{
+}
+
+.modal__color--resize {
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -578,90 +584,105 @@ button:focus {
     width: 100%;
     background: #39DF8F;
     border-radius: 0px 0px 8px 8px;
-    }
-    .content__status{
-        position: relative;
-        left: 78%;
-    }
-    .modal__color--resizeRed{
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        height: 8px;
-        width: 100%;
-        background: red;
-        border-radius: 0px 0px 8px 8px;
-    }
-    .createProductAdmin {
+}
 
-        height: 48px;
-        width: 67px;
-        left: 1268px;
-        top: 116px;
-        border-radius: 32px;
-        padding: 15px, 20px, 15px, 20px;
-        background: #FF2253; 
-        border: 1.5px solid #FF2253;
-        color: #F5F5F5;  
-        cursor: pointer;
-        transform: scale(1)     
-    }
-    .createProductAdmin:hover{
-        transform: scale(1.2);
-    }
-    .menuDrop{
-        position: relative;
-        cursor: pointer;
-        transform: scale(1.1);
-        z-index: 3;
-    }
-    .menuDrop:hover{
-        transform: scale(1.3);
-    }
-    .menuDropItens{
-        position: absolute;
-        height: 150px;
-        width: 100px;
-        background-color: #DEE2E6;
-        border-radius: 10px;
-        top: 50px;
-        
-        right: 0;
-    }
+.content__status {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+}
 
-    .imgButton{
-        pointer-events: none;
-    }
-    .button1{
-        cursor:pointer
-    }
-    .button1:hover{
-        background: red;
-        color:white;
-    }
-    .product__Button{
-        transform: scale(1);
-    }
-    .product__Button:hover{
-      transform: scale(1.3);
-    }
-    .itemDrop{
-        position: relative;
-        top:10px;
-        left: 16px;
-        width: 65px;
-        height: 30px;
-        text-decoration: none;
-        color:#000000;
-        padding: 0;
-        font-size: 15px;
-      
-       
-    }
-    .itemDrop:hover{
-      transform: scale(1.2);
-    }
-    @media (min-width: 900px) {
+.modal__color--resizeRed {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 8px;
+    width: 100%;
+    background: red;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.createProductAdmin {
+
+    height: 48px;
+    width: 67px;
+    left: 1268px;
+    top: 116px;
+    border-radius: 32px;
+    padding: 15px, 20px, 15px, 20px;
+    background: #FF2253;
+    border: 1.5px solid #FF2253;
+    color: #F5F5F5;
+    cursor: pointer;
+    transform: scale(1)
+}
+
+.createProductAdmin:hover {
+    transform: scale(1.2);
+}
+
+.menuDrop {
+    position: relative;
+    cursor: pointer;
+    transform: scale(1.1);
+    z-index: 3;
+}
+
+.menuDrop:hover {
+    transform: scale(1.3);
+}
+
+.menuDropItens {
+    position: absolute;
+    height: 150px;
+    width: 100px;
+    background-color: #DEE2E6;
+    border-radius: 10px;
+    top: 50px;
+
+    right: 0;
+}
+
+.imgButton {
+    pointer-events: none;
+}
+
+.button1 {
+    cursor: pointer
+}
+
+.button1:hover {
+    background: red;
+    color: white;
+}
+
+.product__Button {
+    transform: scale(1);
+}
+
+.product__Button:hover {
+    transform: scale(1.3);
+}
+
+.itemDrop {
+    position: relative;
+    top: 10px;
+    left: 16px;
+    width: 65px;
+    height: 30px;
+    text-decoration: none;
+    color: #000000;
+    padding: 0;
+    font-size: 15px;
+
+
+}
+
+.itemDrop:hover {
+    transform: scale(1.2);
+}
+
+@media (min-width: 900px) {
     main {
         display: flex;
         flex-direction: column;
@@ -669,39 +690,45 @@ button:focus {
         justify-content: center;
         padding: 32px 16px;
     }
+
     header {
         box-shadow: 0 0 40px -20px rgba(0, 0, 0, .25);
         height: 72px;
         padding: 0 16px;
     }
+
     .container_admin {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
+
     .container_admin>* {
         margin-bottom: 0;
     }
+
     .header_search,
     .search {
         width: auto;
     }
+
     .search input {
         width: 312px;
     }
+
     .createProductAdmin {
         left: 70%;
         width: 217px;
     }
-    
+
     .opacity {
 
-    position: relative;
-    background: #00000080;
-    bottom: 60vw;
-    opacity: 1.5;
-    width: 100%;
-    height: 830vh;
-}
+        position: relative;
+        background: #00000080;
+        bottom: 60vw;
+        opacity: 1.5;
+        width: 100%;
+        height: 830vh;
+    }
 }

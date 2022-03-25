@@ -19,25 +19,26 @@ if (infoUser != null && infoUser.error == undefined) {
     filters(productsPrivade)
     admin.classList.remove('remover')
     logOut.classList.remove('remover')
-    
+
 } else {
     Controller.sendProductsCards(productsList)
     filters(productsList)
     admin.classList.add('remover')
     logOut.classList.add('remover')
 
-    
-    
+
+
 
     mainSection.addEventListener("click", (event) => {
-     
-        const btnBuy  = event.target 
-        if(btnBuy.tagName == "IMG"){
-    
-            document.querySelector(".login__modal").style = "display: flex;"
+
+        const btnBuy = event.target
+        if (btnBuy.tagName == "IMG") {
+
+            document.querySelector(".modal").style = "display: flex;"
+            cartaux.style = "display:flex";
         }
     })
-    
+
 
 
 }
@@ -51,13 +52,14 @@ const cart = document.querySelector(".main__cart")
 const cartButton = document.querySelector(".cart__button")
 const closeCart = document.querySelector(".cart__header__button")
 const cartBoddy = document.querySelector('.cart__body')
+const cartaux = document.querySelector(".main__cart__aux")
 mainSection.addEventListener("click", (event) => {
- 
-    const btnBuy  = event.target
-    
-    if(btnBuy.tagName == "IMG"){
 
-        const idProduct  = btnBuy.id
+    const btnBuy = event.target
+
+    if (btnBuy.tagName == "IMG") {
+
+        const idProduct = btnBuy.id
 
         let indexProd = productsPrivade.findIndex(produ => produ.id == idProduct)
         Carrinho.postProduct(productsPrivade[indexProd])
@@ -66,21 +68,23 @@ mainSection.addEventListener("click", (event) => {
 
 })
 cartButton.addEventListener("click", () => {
-    cart.style = "display:block;"
-
+    cart.style = "display:flex;";
+    cartaux.style = "display:block";
 })
 
 closeCart.addEventListener("click", () => {
     cart.style = "display:none;"
+    cartaux.style = "display:none";
 })
 
 
 //fechando o modal de registrar 
 let modalButtonRegisterClose = document.querySelector(".closeModal__title--resize")
 
-modalButtonRegisterClose.addEventListener("click", ()=>{
+modalButtonRegisterClose.addEventListener("click", () => {
 
-    document.querySelector(".login__modal").style = "display: none;"
+    document.querySelector(".modal").style = "display: none;"
+    cartaux.style = "display:none";
 })
 
 Carrinho.sendProductsCards()
@@ -89,12 +93,12 @@ Carrinho.sendProductsCards()
 
 
 cartBoddy.addEventListener("click", (event) => {
- 
-    const btnRemove  = event.target
-    
-    if(btnRemove.className == "imgTrash__cart--resize"){
 
-        const idProduct  = btnRemove.id
+    const btnRemove = event.target
+
+    if (btnRemove.className == "imgTrash__cart--resize" || btnRemove.className == "buttonProduct__remove") {
+
+        const idProduct = btnRemove.id
 
         Carrinho.removeProduct(idProduct)
         Carrinho.sendProductsCards()
@@ -107,4 +111,3 @@ const menuDrop = document.querySelector('.menuDrop')
 menuDrop.addEventListener('click', controllerDrop)
 
 export { productsList }
-

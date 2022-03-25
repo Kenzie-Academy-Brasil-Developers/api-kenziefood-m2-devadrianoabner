@@ -1,5 +1,5 @@
 const sectionCart = document.querySelector('.main__cart')
-      
+
 const divCartBody = document.querySelector('.cart__body')
 
 const quantityNum = document.querySelector('.cart__footerQuantity__Number--format')
@@ -9,16 +9,16 @@ const divTotalPrice = document.querySelector('.cart__footerTotalPrice')
 const infoUser = JSON.parse(localStorage.getItem('@kenzie_food:token'))
 
 
-export class Carrinho{
+export class Carrinho {
 
-    static products = []
-    
-    static interfaceCarrinho(product){
-      
-      let cardCart = document.createElement("div")
-        cardCart.classList.add("cardCart__Product")
+  static products = []
 
-        cardCart.innerHTML = `
+  static interfaceCarrinho(product) {
+
+    let cardCart = document.createElement("div")
+    cardCart.classList.add("cardCart__Product")
+
+    cardCart.innerHTML = `
         <div class="cart_cardBody">
                  <figure class="productImg__cart">
                      <img class="productImg__cart--resize" src="${product.imagem}">
@@ -32,90 +32,90 @@ export class Carrinho{
                 <img src="./src/img/trash.png" class="imgTrash__cart--resize" id="${product.id}">
                 </button>
           </div>`
-      
-      divCartBody.appendChild(cardCart)
-    }
 
-    static sendProductsCards(){
-
-      divCartBody.innerHTML = ''
-      quantityNum.innerText = this.products.length
-      this.totalValue()
-
-      this.getLocalStorage().forEach(product =>{
-          this.interfaceCarrinho(product)
-          console.log(product)
-      })
+    divCartBody.appendChild(cardCart)
   }
 
-    static totalValue() {
+  static sendProductsCards() {
 
-    
-        const total = this.products.reduce((total, product) => {
-          const productPrice = product.preco;
-          return total + Number(productPrice);
-        }, 0)
-    
-        totalPriceNum.innerText = `R$ ${total.toFixed(2)}`
-    }
+    divCartBody.innerHTML = ''
+    quantityNum.innerText = this.products.length
+    this.totalValue()
 
-    static getProducts(){
+    this.getLocalStorage().forEach(product => {
+      this.interfaceCarrinho(product)
+      console.log(product)
+    })
+  }
+
+  static totalValue() {
+
+
+    const total = this.products.reduce((total, product) => {
+      const productPrice = product.preco;
+      return total + Number(productPrice);
+    }, 0)
+
+    totalPriceNum.innerText = `R$ ${total.toFixed(2)}`
+  }
+
+  static getProducts() {
+    return this.products
+  }
+
+  static postProduct(product) {
+
+    this.products.push(product)
+    this.setLocalStorage()
+    divQuantity.style = "display: flex;"
+    divTotalPrice.style = "display: flex;"
+    divCartBody.style = "background-image: none"
+
+  }
+
+  static setLocalStorage() {
+
+    const productsCart = JSON.stringify(this.products)
+
+    localStorage.setItem('produtos', productsCart)
+
+  }
+
+  static getLocalStorage() {
+
+    const productsJson = localStorage.getItem("produtos")
+
+    if (typeof productsJson === "string") {
+
+      const productsCart = JSON.parse(productsJson)
+
+      this.products = productsCart
+
       return this.products
-    }
 
-    static postProduct(product){
-      
-        this.products.push(product)
-        this.setLocalStorage()
-        divQuantity.style = "display: flex;"
-        divTotalPrice.style = "display: flex;"
-        divCartBody.style = "background-image: none"
+    } else {
+
+      return []
 
     }
 
-    static setLocalStorage(){
-
-      const productsCart  =  JSON.stringify(this.products)
-
-      localStorage.setItem('produtos', productsCart)
-
-    }
-
-    static getLocalStorage(){
-
-      const productsJson = localStorage.getItem("produtos")
-      
-      if(typeof productsJson === "string"){
-          
-          const productsCart  =  JSON.parse(productsJson)
-
-          this.products = productsCart 
-
-          return this.products
-
-      }else{
-
-          return []
-      
-      }
-     
   }
 
-  static removeProduct(id){
-    
+  static removeProduct(id) {
+
     let indexProduct = Carrinho.products.findIndex(item => item.id == Number(id))
     Carrinho.products.splice(indexProduct, 1)
-    
+
     quantityNum.innerText = Carrinho.products.length
     Carrinho.totalValue()
 
     localStorage.setItem('produtos', JSON.stringify(Carrinho.products))
     Carrinho.sendProductsCards()
-    }
-  
-    static initDataBase(){
+  }
+
+  static initDataBase() {
     this.getLocalStorage()
-    }
+  }
 }
 
 Carrinho.initDataBase()
